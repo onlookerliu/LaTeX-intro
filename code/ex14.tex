@@ -1,0 +1,14 @@
+\documentclass{ctexart}
+\usepackage{ctex}
+\usepackage{amsmath}
+\begin{document}
+一些小的运算符，可以在数学模式下直接输入；另一些需要用控制序列生成，如：
+\[
+\pm\; \times \; \div\; \cdot\; \cap\; \cup\;
+\geq\; \leq\; \neq\; \approx \; \equiv
+\]
+连加、连乘、极限、积分等大型运算符分别用 sum, prod, lim, int生成。他们的上下标在行内公式中被压缩，以适应行高。我们可以用 limits 和 nolimits 来强制显式地指定是否压缩这些上下标。例如：$ \sum_{i=1}^n i\quad \prod_{i=1}^n $,
+$ \sum\limits _{i=1}^n i\quad \prod\limits _{i=1}^n $
+\[ \lim_{x\to0}x^2 \quad \int_a^b x^2 dx \]
+\[ \lim\nolimits _{x\to0}x^2\quad \int\nolimits_a^b x^2 dx \]
+\end{document}

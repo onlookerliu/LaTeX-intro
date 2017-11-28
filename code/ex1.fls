@@ -1,0 +1,15 @@
+PWD /Users/kay/Desktop/LaTeX-intro/code
+INPUT /usr/local/texlive/2016/texmf.cnf
+INPUT /usr/local/texlive/2016/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2016/texmf-var/web2c/xetex/xelatex.fmt
+INPUT ex1.tex
+OUTPUT ex1.log
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/local/texlive/2016/texmf-dist/tex/latex/base/size10.clo
+INPUT ex1.aux
+INPUT ex1.aux
+OUTPUT ex1.aux
+OUTPUT ex1.xdv
+INPUT ex1.aux
