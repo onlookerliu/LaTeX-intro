@@ -52,8 +52,6 @@ LaTeX 是一个排版系统，它是一个引擎。它以文本作为输入，�
 
 ```LaTeX
 \documentclass{article}
-% the preamble should be here.
-% but there's nothing in it.
 \begin{document}
     \begin{center}
         Welcome to \\
@@ -63,8 +61,6 @@ LaTeX 是一个排版系统，它是一个引擎。它以文本作为输入，�
 ```
 
 打完了之后用 XeLaTeX 作为引擎排版，然后新鲜出炉的 PDF 文档就会展现在眼前啦！是不是很有成就感！
-
-_______
 
 ## 动手写 LaTeX
 
@@ -86,6 +82,10 @@ _______
 \end{document}
 ```
 
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/ex1.png" width=80%>
+</div>
+
 首先第1行中的\documentclass表示的是这个文档的文类(document class)。所谓文类，是指一套预设的排版格式，常见的（英文文类）有 article，report，book 等等。它们之间有一些微妙的差别，比如 book 文类就为了适应书籍的装订，为奇数页和偶数页安排了不同的左右边距；report 和 article 非常相似，但 report 中可以使用更多的章节等级，article 则是几乎最简单的一种。
 
 我们能看到，所有蓝色的部分都是由反斜杠“\”打头的，这些都叫做**命令**(command)。每个命令后可能会有**参数**(argument)，比如\documentclass就接受一个参数，就是用大括号括起来的 article。今后大家可能会遇到有更多参数的命令，那么就在后面继续加大括号就行了，每个参数都应该在一个大括号中。*有的命令没有参数*，比如第4行的“\\”表示换行，第5行的“\LaTeX”表示 LaTeX 的 logo，直接使用即可。
@@ -93,6 +93,10 @@ _______
 #### 正文
 
 在文类的定义之后就是正文部分，每个文档的正文部分都必须在\begin{document}和\end{document}之间。这一对命令组成了一个**环境**(environment)，在不同的环境当中，文本会有不同的格式预设。document 环境是最基本的环境，第3行和第6行之间还有一个 center 环境，这一环境的预设就是其中的内容全部以居中的方式进行排版。常用的环境有很多，例如 equation 环境用于排版公式，figure 环境用于排版图片，itemize 环境表示无序列表，enumerate 环境表示有序列表，诸如此类的环境我们会在后面慢慢提到。
+
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/ex1.png" width=60%>
+</div>
 
 这个文档的全部内容就是 Welcome to LaTeX 。当初为了将它作为题图，我希望它居中，于是放在了 center 环境里。我又希望它分两行呈现，因此在 Welcome to 后面加了一个强制断行命令。这里可能有人会问了，为什么已经按了回车，它却不断行呢？这里涉及到一个 LaTeX 中的基本规则，就是在一般情况下，一个换行、一个空格和多个空格这三种东西表达在输出文档中都是一个空格，而换行则需要连续两个换行符才能实现。与之等价的命令就是“\\”，它在排版表格等需要强制换行对齐的环境中非常有用，在正文中也可以使用。在这里，你也可以尝试把它删去，再用两个回车代替，看看排版效果是不是相同。
 
@@ -124,7 +128,9 @@ ctexart 文类相比 article，日期变成了中文表达，而且行间距自�
 \end{document}
 ```
 
-![](img/ex2.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/ex2.png" width=80%>
+</div>
 
 上面这个文档就是一个相对丰富的文档了。这里要为大家介绍5个命令：
 
@@ -192,7 +198,9 @@ There are smaller words and {\Large larger words}.
 \end{document}
 ```
 
-![](img/font.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/font.png" width=80%>
+</div>
 
 这就是 LaTeX 中基本的字体。其中无衬线字体主要用于幻灯片展示，因为在距离较远的情况下，衬线对文字形状的识别没有任何用处，所以用无衬线字体来提升观众对文字的识别（所以不要再用宋体和 Times New Roman 做幻灯片了）。打字机字体具有字体等宽的性质，适合排版代码和抄录，方便对齐。意大利和加粗一般用于强调，意大利还可以用于引用他人的文字。通常情况下，罗马字体族就可以满足我们的大部分要求。一个文档中最好不要出现三种以上完全不同的字体，那样会显得非常杂乱。
 
@@ -214,7 +222,9 @@ There are smaller words and {\Large larger words}.
 \end{document}
 ```
 
-![](img/ziti.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/ziti.png" width=80%>
+</div>
 
 另外，如果要给一个词语着重强调，可以使用`\emph`命令。它会把相应的文字改变成意大利形状。例如上图中的“斜体强调”就可以用“\emph{斜体强调}”来表达。
 
@@ -250,7 +260,9 @@ There are smaller words and {\Large larger words}.
 \end{document}
 ```
 
-![](img/2lists.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/2lists.png" width=80%>
+</div>
 
 这两个环境都用 \item 作为新的一行的开始。如果要多级列表的话在里面再包裹一个环境就行了。
 
@@ -283,11 +295,13 @@ There are smaller words and {\Large larger words}.
 \subparagraph{小段落}
 \section{又一节}
 \lipsum[9-10]
-\subsection{又一小节}
+\subsection{又一小节
 \end{document}
 ```
 
-![](img/structure.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/ex6.png" width=80%>
+</div>
 
 在一般情况下，三级编号五级结构已经足够大家使用了，太深的组织结构会让读者觉得很乱，也会把文字打得很散，不利于表现主题。在编译的过程中， 引擎会自动为这个节标题进行编号。这是一个非常好用的特性。如果你的文章有十个 section，你想在第二个和第三个之间加入一个 section ，只需要直接往里面加就行了，完全不用考虑编号的事。再比如有几个 section 你想要加深一级变成 subsection，再合并成一个 section，在 LaTeX 这种组织结构下可以很轻松地完成。如果是手打的编号的话，大家可以自行想象一下编号改动的工作量，我反正是不敢想。
 
@@ -311,7 +325,9 @@ There are smaller words and {\Large larger words}.
 \end{document}
 ```
 
-![](img/crossref.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/crossref.png" width=80%>
+</div>
 
 如果这个时候我在这两节之间加入了新的一节，LaTeX 介绍就变成了第3节，那么我们不需要复杂的操作，该写什么写什么就行了。例子如下：
 
@@ -329,7 +345,9 @@ There are smaller words and {\Large larger words}.
 \end{document}
 ```
 
-![](img/crossref2.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/crossref2.png" width=80%>
+</div>
 
 大家可以注意到，除了第6行和第7行之外，我什么也没有改。这就是 LaTeX 给我们提供的便利，只要标签打好了，引用的是什么就交给引擎来做吧。
 
@@ -348,7 +366,9 @@ There are smaller words and {\Large larger words}.
 \end{document}
 ```
 
-![](img/colorlink.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/colorlink.png" width=80%>
+</div>
 
 这个时候红色的标记就可以在阅读时用鼠标点击，会直接跳转到被引用的地方。
 
@@ -362,7 +382,9 @@ There are smaller words and {\Large larger words}.
 
 还有一些情况下，是你需要使用一个宏包，但是不知道相关的功能怎么使用。这个时候我们就需要命令行工具（Windows 下的 cmd，macOS、OS X、*nix下的 shell）了。在其中输入“texdoc 宏包名”就可以查阅宏包的文档，里面有详细的使用说明，在提出更多问题之前一定要好好阅读。比如我们要查刚刚使用的宏包 hyperref 的文档，就可以在命令行输入“texdoc hyperref”，一个回车下去就会跳出一个 PDF 文档，那就是你要的说明书。
 
-![](img/texdoc.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/texdoc.png" width=80%>
+</div>
 
 如果你只是想要实现一个功能，既不知道用什么命令，也不知道用什么宏包，那么这个时候你需要 Google。到搜索引擎中去把你想要的功能加上 LaTeX 作为关键词就可以搜到很多有用的资料。在阅读这些资料的时候一定要注意两点：（1）最好阅读英文，更容易找到你要的内容；（2）注意时效性，太旧的文章要辩证接受。当你知道相关的命令和相关的宏包时，你就可以在本地查阅相关的文档了。
 
@@ -388,7 +410,9 @@ There are smaller words and {\Large larger words}.
 \end{document}
 ```
 
-![](img/content1.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/content1.png" width=80%>
+</div>
 
 目录的内容显示为红色，是因为 hyperref 宏包的 colorlinks 选项。我们以后将默认载入这个宏包，告诉大家这些红色的文字都是可以点击跳转的，这也是我非常喜欢的一个特性。
 
@@ -408,7 +432,9 @@ There are smaller words and {\Large larger words}.
 \end{document}
 ```
 
-![](img/content2.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/content2.png" width=80%>
+</div>
 
 ### 插入数学公式
 
@@ -484,7 +510,9 @@ $\sqrt{x}$, $\frac{1}{2}$.
 \end{document}
 ```
 
-![](img/fractions.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/fractions.png" width=80%>
+</div>
 
 可以发现，在行间公式和行内公式中，分式的输出效果是有差异的。如果要强制行内模式的分式显示为行间模式的大小，可以使用 \dfrac, 反之可以使用 \tfrac。
 
@@ -512,13 +540,19 @@ $ \sum\limits _{i=1}^n i\quad \prod\limits _{i=1}^n $
 \[ \lim\nolimits _{x\to0}x^2\quad \int\nolimits_a^b x^2 dx \]
 ```
 
-![](img/operators.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/operators.png" width=80%>
+</div>
 
 多重积分可以使用 \iint, \iiint, \iiiint, \idotsint 等命令输入。
 
 ```LaTeX
 \[ \iint\quad \iiint\quad \iiiint\quad \idotsint \]
 ```
+
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/operator.png" width=80%>
+</div>
 
 #### 定界符（括号等）
 
@@ -538,7 +572,9 @@ $ \sum\limits _{i=1}^n i\quad \prod\limits _{i=1}^n $
 \rVert\bigr\rVert\Bigr\rVert\biggr\rVert\Biggr\rVert \]
 ```
 
-![](img/delimiter.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/delimiter.png" height=250>
+</div>
 
 #### 省略号
 
@@ -549,7 +585,9 @@ $ \sum\limits _{i=1}^n i\quad \prod\limits _{i=1}^n $
 \vdots\quad \ddots \]
 ```
 
-![](img/dots.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/dots.png" width=80%>
+</div>
 
 #### 矩阵
 
@@ -565,7 +603,9 @@ amsmath 的 pmatrix, bmatrix, Bmatrix, vmatrix, Vmatrix 等环境可以在矩阵
 
 效果图：
 
-![](img/matrix.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/matrix.png" width=80%>
+</div>
 
 使用 smallmatrix 环境，可以生成行内公式的小矩阵。
 
@@ -575,7 +615,9 @@ I have a little matrix $ ( \begin{smallmatrix} a&b\\c&d \end{smallmatrix} ) $.
 
 效果图:
 
-![](img/smallmatrix.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/smallmatrix.png" width=80%>
+</div>
 
 #### 数学符号
 
@@ -621,7 +663,9 @@ d+e+f+g
 
 效果：
 
-![](img/multline.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/multline.png" width=80%>
+</div>
 
 2. 对齐
 
@@ -638,7 +682,9 @@ x ={}& a+b+c+{} \\
 
 效果图：
 
-![](img/aligned.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/aligned.png" width=80%>
+</div>
 
 #### 公式组
 
@@ -657,7 +703,9 @@ x &= y+z
 
 效果：
 
-![](img/gather.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/gather.png" width=80%>
+</div>
 
 如果我们是要把一个公式拆分成多行来书写，并给出一个单独的编号，那么上面的两个环境就不那么适用了。在这里为大家介绍 split 环境。split 环境需要嵌套在 equation 环境中使用，也支持像 align 环境中那样的对齐方式（但不能多列对齐），举例如下：
 
@@ -670,7 +718,9 @@ x &= y+z
 \end{equation}
 ```
 
-![](img/split.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/split.png" width=80%>
+</div>
 
 请注意，永远不要使用 eqnarray 环境。原因如下：
 
@@ -679,7 +729,9 @@ x &= y+z
 - [eqnarray 是恼人的](http://www.tex.ac.uk/cgi-bin/texfaq2html?label=eqnarray)
 - [eqnarray 是邪恶的](http://www.tug.org/pracjourn/2006-4/madsen/)
 
-![](img/eqnarray.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/eqnarray.png" width=80%>
+</div>
 
 #### 分段函数
 
@@ -695,7 +747,9 @@ f_x(x) = \begin{cases}
 \]
 ```
 
-![](img/cases.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/cases.png" width=80%>
+</div>
 
 cases 环境有一个重大的缺陷，就是在每个 case 中，公式都会被变成行内公式。所以在这里我们用 \dfrac 命令来强制让分式变成行间公式。如果我们想简单地解决这个问题，就需要使用 mathtools 宏包定义的 dcases 环境，用法和 cases 完全相同，但是可以以行间公式的形式来排版每个 case。
 
@@ -721,7 +775,9 @@ cases 环境有一个重大的缺陷，就是在每个 case 中，公式都会�
 
 这样图片宽度会被缩放至**原尺寸**的百分之五十，图片的总高度也会按比例缩放。
 
-![](img/graphicx.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/graphicx.png" width=50%>
+</div>
 
 > \includegraphics 控制序列还有若干其他的可选参数可供使用，一般并用不到。感兴趣的话，可以去查看该宏包的文档。
 
@@ -747,7 +803,9 @@ Mac OS & MacTeX & TeXShop \\
 
 效果：
 
-![](img/tabular.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/tabular.png" width=80%>
+</div>
 
 #### 浮动体
 
@@ -762,7 +820,9 @@ Mac OS & MacTeX & TeXShop \\
 \end{figure}
 ```
 
-![](img/figure.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/figure.png" height=200>
+</div>
 
 “htbp” 选项用来指定插图的理想位置，这几个字母分别代表here, top, bottom, float page，也就是就这里、页顶、页尾、浮动页(专门放浮动体的单独页面) 。这四种说明符可以组合使用，自左向右优先级递降。至于最后这个图表出现在哪里，我们就不需要关心了。但是可能出现的一种情况是，如果你的浮动体太多而其他内容太少，它们可能会被堆到整个文档的最后一起出现。
 
@@ -772,7 +832,9 @@ Mac OS & MacTeX & TeXShop \\
 > 图表同样也可以进行交叉引用，只需要加个一个标签，就可以用 \ref 命令进行引用了。
 > 利用 float 宏包，并将figure的参数换成大写的H，可以禁止浮动，文中放哪就放哪
 
-![](img/float.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/float.png" height=200>
+</div>
 
 ### 版面设置
 
@@ -788,7 +850,9 @@ Mac OS & MacTeX & TeXShop \\
 \geometry{left=1cm,right=2cm,top=3cm,bottom=4cm}
 ```
 
-![](img/geometry.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/geometry.png" width=80%>
+</div>
 
 #### 页面风格
 
@@ -819,7 +883,9 @@ Mac OS & MacTeX & TeXShop \\
 \renewcommand{\footrulewidth}{0.4pt}
 ```
 
-![](img/fancyhdr.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/fancyhdr.png" height=400>
+</div>
 
 #### 首行缩进
 
@@ -840,7 +906,9 @@ ctex 宏包已经处理好了首行缩进的问题（自然段前空两格汉字
 \onehalfspacing
 ```
 
-![](img/spacing.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/spacing.png" width=80%>
+</div>
 
 具体可以查看该宏包的[文档](http://texdoc.net/texmf-dist/doc/latex/setspace/README)。
 
@@ -859,7 +927,9 @@ ctex 宏包已经处理好了首行缩进的问题（自然段前空两格汉字
 \addtolength{\parskip}{2em}
 ```
 
-![](img/parskip.png)
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/parskip.png" width=80%>
+</div>
 
 则可以在原有的基础上，增加段间距 2em。如果需要减小段间距，只需将该数值改为负值即可。
 
@@ -891,7 +961,7 @@ TeX, pdfTeX, XeTeX, LuaTeX, LaTeX, pdfLaTeX, XeLaTeX …
 
 #### TeX-LaTeX
 
-TeX 是高德纳（Donald Ervin Knuth，1938年1月10日 –）教授愤世嫉俗（大雾；追求完美）做出来的排版引擎，同时也是该引擎使用的标记语言（Markup Lang）的名称。这里所谓的引擎，是指能够实现断行、分页等操作的程序（请注意这并不是定义）；这里的标记语言，是指一种将控制命令和文本结合起来的格式，它的主体是其中的文本而控制命令则实现一些特殊效果（同样请注意这并不是定义）。
+TeX 是高德纳（Donald Ervin Knuth，1938年1月10日 –）教授愤世嫉俗（追求完美）做出来的排版引擎，同时也是该引擎使用的标记语言（Markup Lang）的名称。这里所谓的引擎，是指能够实现断行、分页等操作的程序（请注意这并不是定义）；这里的标记语言，是指一种将控制命令和文本结合起来的格式，它的主体是其中的文本而控制命令则实现一些特殊效果（同样请注意这并不是定义）。
 
 而 LaTeX 则是 L. Lamport （1941年2月7日 – ） 教授开发的基于 TeX 的排版系统。实际上 LaTeX 利用 TeX 的控制命令，定义了许多新的控制命令并封装成一个可执行文件。这个可执行文件会去解释 LaTeX 新定义的命令成为 TeX 的控制命令，并最终交由 TeX 引擎进行排版。
 
@@ -964,6 +1034,10 @@ CTeX论坛提问版：http://bbs.ctex.org/forum.php?mod=forumdisplay&fid=6&page=
 3. 选择一款适合自己的字体，百看不腻有木有！
 4. 如果能有代码自动补全，那再好不过。
 5. 没有代码补全的最好要有代码高亮。
+
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/subl.png" width=80%>
+</div>
 
 ### 代码风格
 

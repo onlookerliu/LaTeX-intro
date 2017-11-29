@@ -1,8 +1,8 @@
 ---
 presentation:
   enableSpeakerNotes: true
-  width: 960
-  height: 700
+  width: 1024
+  height: 768
 
 toc:
   depth_from: 1
@@ -33,6 +33,56 @@ held by *Graduate Student Union*
 - 优雅 <!-- .element: class="fragment" data-fragment-index="4" -->
 - 强大 <!-- .element: class="fragment" data-fragment-index="5" -->
 
+<!-- slide vertical=true -->
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/demo1.png" height=700>
+</div>
+
+<!-- slide vertical=true -->
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/demo7.png" height=700>
+</div>
+
+<!-- slide vertical=true -->
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/demo2.png" height=700>
+</div>
+
+<!-- slide vertical=true -->
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/demo3.png" height=700>
+</div>
+
+<!-- slide vertical=true -->
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/demo4.png" height=700>
+</div>
+
+
+<!-- slide vertical=true -->
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/demo9.png" height=700>
+</div>
+
+<!-- slide vertical=true -->
+@import "http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/demo8.png"
+
+<!-- slide vertical=true -->
+@import "http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/demo11.png"
+
+<!-- slide vertical=true -->
+@import "http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/demo10.png"
+
+<!-- slide vertical=true -->
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/demo13.png" height=700>
+</div>
+
+<!-- slide vertical=true -->
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/demo12.png" height=700>
+</div>
+
 <!-- slide -->
 ### 什么样的人适合LaTeX?
 
@@ -45,10 +95,14 @@ held by *Graduate Student Union*
 <!-- slide -->
 ### LaTeX 简史
 
-@import "https://upload.wikimedia.org/wikipedia/commons/4/4f/KnuthAtOpenContentAlliance.jpg" (width: 60%)
-- TeX 的发明者
-- Stanford CS系终身教授
+<!-- slide -->
+<div align=center>
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/KnuthAtOpenContentAlliance.jpg" height=300>
+</div>
+
+- TeX 的发明
 - 1974年图灵奖得主
+- Stanford CS系终身教授
 - The Art of Computer Programming
 - ...
 
@@ -368,7 +422,7 @@ squre root & fractions
 公式组 (按块编号)
 @import "http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/add21.png"
 
-<!-- slide vertical=true -->
+<!-- slide -->
 **永远不要使用eqnarray环境**
 - [eqnarray 是糟糕的](https://faculty.math.illinois.edu/~hildebr/tex/displays.html)
 - [eqnarray 是有害的](http://texblog.net/latex-archive/maths/eqnarray-align-environment/)
@@ -381,6 +435,10 @@ squre root & fractions
 <!-- slide vertical=true -->
 分情况的公式组
 @import "http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/ex22.png"
+
+<!-- slide vertical=true -->
+定理环境
+@import "http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/add22.png"
 
 <!-- slide -->
 ### 插入图片与表格
@@ -422,7 +480,6 @@ squre root & fractions
 ```LaTeX
 \pagestyle{headings}
 ```
-
 
 <!-- slide vertical=true -->
 页眉页脚 (fancyhdr包)
@@ -491,6 +548,11 @@ squre root & fractions
 
 5. 没有代码补全的最好要有代码高亮。<!-- .element: class="fragment" data-fragment-index="5" -->
 
+<!-- slide vertical=true -->
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/st3.png" height=700>
+</div>
+
 <!-- slide -->
 ### 代码风格 
 
@@ -504,8 +566,12 @@ squre root & fractions
 
 5. 学习模板中高手的代码！<!-- .element: class="fragment" data-fragment-index="5" -->
 
+<!-- slide vertical=true -->
+<div align=center>
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/subl.png" height=700>
+</div>
 
-
+<!-- slide data-background-image="http://ooo.0o0.ooo/2016/07/18/578c66da6a5a3.jpg" -->
 
 
 

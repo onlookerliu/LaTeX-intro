@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+\draw [help lines](0,0) grid (2,3);
+\newcommand{\aaa}{1};
+\newcommand{\bbb}{3};
+\newcommand{\ccc}{2};
+\coordinate (pA) at (\aaa, 0);
+\coordinate (pB) at (\ccc, \bbb);
+\coordinate (pC) at (0, \ccc);
+\draw[fill=red] (pA) -- (pB) -- (pC) -- (pA);
+\end{tikzpicture}
+\end{document}
+
+	
