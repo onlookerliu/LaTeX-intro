@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>LaTex-intro</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/kay/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.3.1/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h1 class="mume-header" id="latex%E4%BC%98%E9%9B%85%E9%AB%98%E6%95%88%E7%9A%84%E5%86%99%E4%BD%9C%E6%96%B9%E5%BC%8F">LaTeX：优雅高效的写作方式</h1>
+
+<h2 class="mume-header" id="%E5%86%99%E5%9C%A8-latex-%E4%B9%8B%E5%89%8D">写在 LaTeX 之前</h2>
+
+<h3 class="mume-header" id="%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-latex">为什么要使用 LaTeX</h3>
+
+<ul>
+<li>纯文本</li>
+<li>跨平台</li>
+<li>高效</li>
+<li>优雅</li>
+<li>强大</li>
+</ul>
+<h3 class="mume-header" id="%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E4%BA%BA%E9%80%82%E5%90%88%E4%BD%BF%E7%94%A8-latex">什么样的人适合使用 LaTeX</h3>
+
+<p>LaTeX 和 Word 各有千秋，有很多Geeks或者LaTeX的狂热粉过分强调了 LaTeX 的一些并非常用的特性，以至于很多初学者会觉得 LaTeX 很神秘很复杂，从而引发了初学者的畏难情绪甚至是负面情绪。</p>
+<p>我曾经也受到过这些言论的影响，但当我真正弄明白这个问题(什么样的人适合使用 LaTeX)时，已经不再对这两种工具有太多偏见。因此我想以我自己的方式，向更多的人介绍 LaTeX，客观清晰地认识到 LaTeX 的优缺点。</p>
+<p>latex 主要面向的用户是科研工作者和需要高质量排版的用户。不得不承认，它其实并不是一个好学的东西。我们只有通过前期付出一定学习成本才能用它排版出自己心仪的作品。它并不像 Word，打开打字就能用，排版效果也无法直接显示在面前，所以学习的成本还是挺高的。我在研一的时候为了满足某些课程作业的需求开始写 LaTeX，发现成果不错便将所有课程作业都用 LaTeX 排版完成。因此学习和使用 LaTeX 需要一定的毅力去学习，就像学习任何其他的东西一样。</p>
+<h3 class="mume-header" id="latex-%E7%AE%80%E5%8F%B2">LaTeX 简史</h3>
+
+<p>学数学或者学计算机的人都知道一个人，就是高德纳 (Donald E. Knuth)。他在而立之年就写下了巨著《计算机程序设计艺术 (The Art of Computer Programming, TAOCP)》的前三卷，并凭借它成为历史上最年轻的图灵奖获得者。当这部书交付印刷后给他看时，他说：“我不知道怎么办。我花了整整 15 年写这些书，可要是这么难看，我就 再也不写了。我怎么能对这样的作品引以为豪呢？” 于是20世纪70年代他就放下了 TAOCP 的写作，用十年的时间写出了 LaTeX 的前身：TeX。同时发布的还有他为 TeX 写的说明书《The TeXBook》。TeX 的版本号从3开始，每次更新都会按照圆周率 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base"><span class="mord mathit" style="margin-right:0.03588em;">π</span></span></span></span> 的小数顺序向后加一位，比如3，3.1，3.14，3.141……目前我使用的 TeX 版本是3.14159265。</p>
+<p>这一系统推出之后对出版业影响巨大。TeX 的核心思想就是源自中国的活字印刷术，使用一系列命令来在纸上的不同位置放下不同的文字，这样完成排版工作。但是最初的 TeX 和手动排版没有太大的本质差别，使用起来还是有些不方便。于是在80年代，美国计算机科学家莱斯利·兰伯特 (Leslie Lamport) 在原来 TeX 的基础上加上了许多功能，使得它变得更加易用。大家在 TeX 的前面加上了兰伯特姓氏的前两个字母，就成为了LaTeX。LaTeX 目前的版本是2ε，表示比2大但是比3小，一般也写作 LaTeX2e。莱斯利·兰伯特也在2014年获得2013年度图灵奖。当时的国际计算机学会 (Association of Computer Machinery, ACM) 和美国数学学会 (American Mathematical Society, AMS) 都采用了这一排版系统，直到今天它仍然是学术排版的不二工具。许多学术期刊都提供 LaTeX 模板，并只接收 TeX 源文件投稿。</p>
+<p>LaTeX 是公开源代码的软件，业界许多大牛写出了很多功能各异的宏包来实现各种各样的功能。比如 AMS 官方开发了 amsmath 系列宏包，提供数学排版标准和相应的符号支持；甚至还有专门排版乐谱、化学式、棋谱的宏包。庞大的社区使得 LaTeX 的功能越来越丰富，也让它变得越来越强大。</p>
+<h3 class="mume-header" id="latex-%E7%9A%84%E5%AE%89%E8%A3%85">LaTeX 的安装</h3>
+
+<p>安装 LaTeX 并不是一件难事，只要选择合适的发行版就行了。LaTeX 相关的全部资源都在 CTAN (Comprehensive TeX Archive Network) 上，可以登录世界各地的镜像网站看到相关的资源。不过需要手动获取资源的情况其实不多，这里只是作一个介绍。</p>
+<ul>
+<li>Linux 平台可用 TeX Live，建议不要直接用 apt-get 或者 yum 直接安装，那样安装出来的版本功能不全，（加上-full参数同样不全）。最好还是找到最新版本的TeXLive下载安装，省心。</li>
+<li>Windows 平台上比较常用的可能是 CTeX 套装，其中自带的编辑器有 WinEdt 和 TeXWorks。但是CTeX目前更新较慢，而且实际软件包也不全，同样强烈建议安装 TeXLive。在数院研究生会公众号可以获得最新版 TeXLive 的安装包和简明安装教程。TeXLive 同样使用 TeXWorks 编辑器。</li>
+<li>macOS/OS X 墙裂建议使用 MacTeX，安装过程同样简单。目前这个对中文的支持最好。</li>
+</ul>
+<h3 class="mume-header" id="latex-%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86">LaTeX 的工作原理</h3>
+
+<p>说了这么多，LaTeX 到底是个什么东西呢？下面我们就来回答这个问题。</p>
+<p>LaTeX 是一个排版系统，它是一个引擎。它以文本作为输入，以排版好的文档作为输出。这就像很久以前还没有电脑时候的出版社一样，你把写好的手稿给出版社，出版社帮你出版成书。真正重要的是你写的内容，至于用什么笔、什么纸，都无所谓。所以纯净的 LaTeX 只是一个引擎，它将一个.tex源文件作为输入，把成品文档作为输出。我们写作时其实是在编辑这个.tex源文件。源文件其实只是一个纯文本文件，你可以用任何一种文本编辑器（比如 Windows 下的记事本）来写作。但是由于用 LaTeX 写作不是“所见即所得”的，源文件中会有许多排版命令和标记（类似 HTML），因此方便起见，大家开发了一些专门用于编辑 .tex 文件的编辑器，比如我使用的 VSCode。初学者我推荐 TeXworks (Windows) Vim (Linux) 和 TeXShop (macOS)，在自己有了一定的编辑习惯和定制编辑器的能力之后，可以再换别的编辑器。不过编辑器从来都没有最好的，挑一个趁手的用就行了。</p>
+<p>由于一些历史原因，比如打印设备的进步，LaTeX 发行版中带有多个引擎。目前比较常用的引擎是 XeLaTeX，因为它能够兼容的字符集更全面，尤其是在处理东亚文字方面支持得更好。关于字符集和字体的问题我会在后面找机会和大家详细介绍，现在知道这个就好了。所以整个文档的写作过程可以表达为：</p>
+<blockquote>
+<p>（编写）-&gt; .tex文件 -（输入）-&gt; XeLaTeX -（输出）-&gt; PDF文档 --&gt;发布</p>
+</blockquote>
+<p>这也是我们接下来编写文档的全部过程。</p>
+<h3 class="mume-header" id="%E7%AC%AC%E4%B8%80%E4%B8%AA-latex-%E6%96%87%E6%A1%A3">第一个 LaTeX 文档</h3>
+
+<p>安装好 LaTeX 的你是不是着急想要开始排版第一个文档了呢？这里我把制作题图的 LaTeX 源文件贴在下面，大家可以按照这个文档写一个 hello.tex，然后自己排版试试看。没有调好中文字体的朋友们也可以尝试，因为这里并没有汉字出现。</p>
+<pre class="language-LaTeX"><span class="token function selector">\documentclass</span><span class="token punctuation">{</span><span class="token keyword">article</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+    <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">center</span><span class="token punctuation">}</span>
+        Welcome to <span class="token function selector">\\</span>
+        <span class="token function selector">\LaTeX</span>
+    <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">center</span><span class="token punctuation">}</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+</pre>
+<p>打完了之后用 XeLaTeX 作为引擎排版，然后新鲜出炉的 PDF 文档就会展现在眼前啦！是不是很有成就感！</p>
+<h2 class="mume-header" id="%E5%8A%A8%E6%89%8B%E5%86%99-latex">动手写 LaTeX</h2>
+
+<h3 class="mume-header" id="latex-%E6%96%87%E6%A1%A3%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9E%84%E6%88%90">LaTeX 文档的基本构成</h3>
+
+<h4 class="mume-header" id="%E5%AF%BC%E8%A8%80%E5%8C%BA">导言区</h4>
+
+<p>导言区是文类定义之后，正文开始之前的部分。它的主要作用是对文档的性质做一些设置，或者自定义一些命令。在前面的例子中，导言区本应该在第1、2行之间，但是因为没有任何内容，所以就省去了。所以含有导言区的文档应该是下面这样的。</p>
+<pre class="language-LaTeX"><span class="token function selector">\documentclass</span><span class="token punctuation">{</span><span class="token keyword">article</span><span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">% the preamble should be here.</span>
+<span class="token comment" spellcheck="true">% but there's nothing in it.</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+    <span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">center</span><span class="token punctuation">}</span>
+        Welcome to <span class="token function selector">\\</span>
+        <span class="token function selector">\LaTeX</span>
+    <span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">center</span><span class="token punctuation">}</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/ex1.png" width="80%">
+</div>
+<p>首先第1行中的\documentclass表示的是这个文档的文类(document class)。所谓文类，是指一套预设的排版格式，常见的（英文文类）有 article，report，book 等等。它们之间有一些微妙的差别，比如 book 文类就为了适应书籍的装订，为奇数页和偶数页安排了不同的左右边距；report 和 article 非常相似，但 report 中可以使用更多的章节等级，article 则是几乎最简单的一种。</p>
+<p>我们能看到，所有蓝色的部分都是由反斜杠“\”打头的，这些都叫做<strong>命令</strong>(command)。每个命令后可能会有<strong>参数</strong>(argument)，比如\documentclass就接受一个参数，就是用大括号括起来的 article。今后大家可能会遇到有更多参数的命令，那么就在后面继续加大括号就行了，每个参数都应该在一个大括号中。<em>有的命令没有参数</em>，比如第4行的“\”表示换行，第5行的“\LaTeX”表示 LaTeX 的 logo，直接使用即可。</p>
+<h4 class="mume-header" id="%E6%AD%A3%E6%96%87">正文</h4>
+
+<p>在文类的定义之后就是正文部分，每个文档的正文部分都必须在\begin{document}和\end{document}之间。这一对命令组成了一个<strong>环境</strong>(environment)，在不同的环境当中，文本会有不同的格式预设。document 环境是最基本的环境，第3行和第6行之间还有一个 center 环境，这一环境的预设就是其中的内容全部以居中的方式进行排版。常用的环境有很多，例如 equation 环境用于排版公式，figure 环境用于排版图片，itemize 环境表示无序列表，enumerate 环境表示有序列表，诸如此类的环境我们会在后面慢慢提到。</p>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/ex1.png" width="60%">
+</div>
+<p>这个文档的全部内容就是 Welcome to LaTeX 。当初为了将它作为题图，我希望它居中，于是放在了 center 环境里。我又希望它分两行呈现，因此在 Welcome to 后面加了一个强制断行命令。这里可能有人会问了，为什么已经按了回车，它却不断行呢？这里涉及到一个 LaTeX 中的基本规则，就是在一般情况下，一个换行、一个空格和多个空格这三种东西表达在输出文档中都是一个空格，而换行则需要连续两个换行符才能实现。与之等价的命令就是“\”，它在排版表格等需要强制换行对齐的环境中非常有用，在正文中也可以使用。在这里，你也可以尝试把它删去，再用两个回车代替，看看排版效果是不是相同。</p>
+<h4 class="mume-header" id="%E6%B3%A8%E9%87%8A">注释</h4>
+
+<p>图中绿色部分就是导言区的位置，当然它并不限于两行，可以有很多。注意到这两行的字以百分号开头，显示为绿色，而且当我们对这个修改后的文档进行排版之后会发现和原来的文档没有任何差别（大家可以自己试试）。这就是我非常喜欢的一个 LaTeX 相对于 Word 的优势，它叫做注释(comment)。注释的内容不参与排版，你可以在里面写自己喜欢的任何东西。任意一行中，从百分号开始以后的部分全部都会在编译时被忽略。</p>
+<p>注释有非常大的用途，我来举个例子。你在写完论文的时候发现，之前写的一段文字没有什么用，可以被精简；但是这些文字如果删掉了就没有办法找回来，万一导师让我再把它加上就麻烦了。于是在 LaTeX 中，你可以放心地把这些内容注释掉而不是删掉，这样在修改文档的同时可以保留你原来的文字，就算导师让我加回来我也能立刻完成。</p>
+<h4 class="mume-header" id="%E5%AE%8F%E5%8C%85">宏包</h4>
+
+<p>先前我们提到，导言区的作用之一是设置文档性质。所谓文档的性质有许多方面，比如设定标题、作者、日期、图题格式、表题格式等。其中还一个非常重要的作用就是添加宏包(package)。宏包可以被理解为一些模块，它们提供 LaTeX 本身没有的命令，以实现一些原本不太好实现的效果。比如 ctex 宏包就是一个把文档格式全部中文化的宏包，并提供 ctexart，ctexrep，ctexbook 等与 article，report，book 相对应的文类，方便排版中文文档。</p>
+<p>ctexart 文类相比 article，日期变成了中文表达，而且行间距自动增加了，可以说适应汉字的排版。所以在写中文文档的时候，推荐大家使用 ctex 系列文类，可以省心很多。</p>
+<p>下面为大家展示一个被 ctex 宏包“汉化”过的文档。</p>
+<pre class="language-LaTeX"><span class="token function selector">\documentclass</span><span class="token punctuation">{</span><span class="token keyword">ctexart</span><span class="token punctuation">}</span>
+
+<span class="token function selector">\title</span><span class="token punctuation">{</span>Introduction to <span class="token function selector">\LaTeX</span><span class="token punctuation">}</span>
+<span class="token function selector">\author</span><span class="token punctuation">{</span>Kai Liu<span class="token punctuation">}</span>
+<span class="token function selector">\date</span><span class="token punctuation">{</span><span class="token function selector">\today</span><span class="token punctuation">}</span>
+<span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">lipsum</span><span class="token punctuation">}</span>
+
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+<span class="token function selector">\maketitle</span>
+<span class="token function selector">\lipsum</span><span class="token punctuation">[</span>1-2<span class="token punctuation">]</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/ex2.png" width="80%">
+</div>
+<p>上面这个文档就是一个相对丰富的文档了。这里要为大家介绍5个命令：</p>
+<ul>
+<li>\title：设置文档标题；有一个参数，用大括号跟在后面，表示标题内容；</li>
+<li>\author：设置文档作者；一个参数；</li>
+<li>\date：设置日期；其中\today表示系统当天日期，也可以手动输入；留空的话则不排版日期；</li>
+<li>\usepackage：调用宏包；此处调用的宏包是 lipsum，用于生成随机文字（上面满篇的洋文其实都是生成的）；第10行的 \lipsum[1-2] 表示插入随机文字的前两段；</li>
+<li>\maketitle：这是这5个命令中唯一一个写在正文区的命令，排版标题；这个命令如果不使用，之前设置的标题、作者、日期都是不会出现在成品中的；使用它之后会排版标题、作者和日期。</li>
+</ul>
+<p>有了这些命令，我们就可以顺利地写一篇简单的文章了，大家可以把里面的内容都换成汉字试试看。</p>
+<h3 class="mume-header" id="%E5%AD%97%E4%BD%93%E4%B8%8E%E5%AD%97%E5%8F%B7">字体与字号</h3>
+
+<p>现在我们能排版一些基本的文字了，下面我们来介绍一下字体和字号。</p>
+<p>与字体相比，字号是相对简单的一个属性。LaTeX 提供了10个命令来声明文字的大小，由小到大分别是：</p>
+<ul>
+<li>\tiny</li>
+<li>\scriptsize</li>
+<li>\footnotesize</li>
+<li>\small</li>
+<li>\normalsize</li>
+<li>\large</li>
+<li>\Large</li>
+<li>\LARGE</li>
+<li>\huge</li>
+<li>\Huge</li>
+</ul>
+<p>些命令会由于全局字号的调整而代表不一样的大小，这样相同的内容在调整的过程中的相对大小保持不变，所以全局的修改不会改乱。以 \Large 为例，用法是将这个命令和需要调整的文字一起用大括号包起来，像这样:</p>
+<pre class="language-LaTeX">There are smaller words and <span class="token punctuation">{</span><span class="token function selector">\Large</span> larger words<span class="token punctuation">}</span>.
+</pre>
+<p>那么如果想要指定字号怎么办呢？老师让我们用五号字来写论文，应该怎么办？这时我们就可以用 ctexart 自带的一个参数 c5size 来处理，用法是在文类定义处做一些修改：</p>
+<pre class="language-LaTeX"><span class="token function selector">\documentclass</span><span class="token punctuation">[</span>c5size<span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token keyword">ctexart</span><span class="token punctuation">}</span>
+</pre>
+<p>这样的话\normalsize就会变成5号字，其他命令也会随之变化。同样地，用cs4size则可以把标准字号定义为小四号。假如想指定字号，而我们熟悉的又是汉字的字号系统（小四、五号之类），我们就可以用 ctex 为我们提供的字号指定命令，用法和前面的命令相同，下面举一些例子大家就明白了：</p>
+<ul>
+<li>小五：\zihao{-5}</li>
+<li>六号：\zihao{6}</li>
+<li>初号：\zihao{0}</li>
+<li>小四：\zihao{-4}</li>
+</ul>
+<p>聪明的你一定看出规律了对不对！</p>
+<p>字体是一个相对复杂的话题。在 MS Word 里面，我们可以随意地将文字加粗、倾斜，但其实里面是有一个完整的字体体系的。一般来说，我们用三个东西来定义一个字体：<strong>字体族(font family)</strong>，<strong>字体形状(font shape)<strong>和</strong>字体系列(font series)</strong>。这个字体主要是对英文而言的，字体族中包含罗马(roman)、无衬线(sans serif)、打字机(typewriter)三种，字体形状有直立(upshape)、意大利(italic shape)、倾斜(slanted shape)、小形大写(small capital)等四种，字体系列则有中等和加宽加粗两种。刚刚提到的在 Word 中的加粗其实就是采用一个字体的加宽加粗系列，而倾斜则是改变形状为倾斜。我们看看下面的例子：</p>
+<pre class="language-LaTeX"><span class="token function selector">\documentclass</span><span class="token punctuation">{</span><span class="token keyword">ctexart</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">tabular</span><span class="token punctuation">}</span><span class="token punctuation">{</span>|ll|ll|ll|<span class="token punctuation">}</span>
+<span class="token function selector">\hline</span>
+字体族 <span class="token punctuation">&amp;</span> 效果 <span class="token punctuation">&amp;</span> 字体形状 <span class="token punctuation">&amp;</span> 效果 <span class="token punctuation">&amp;</span> 字体系列 <span class="token punctuation">&amp;</span> 效果 <span class="token function selector">\\</span>
+<span class="token function selector">\hline</span>
+罗马 <span class="token punctuation">&amp;</span> <span class="token function selector">\textrm</span><span class="token punctuation">{</span>Roman<span class="token punctuation">}</span> <span class="token punctuation">&amp;</span> 直立 <span class="token punctuation">&amp;</span> <span class="token function selector">\textup</span><span class="token punctuation">{</span>upright<span class="token punctuation">}</span> <span class="token punctuation">&amp;</span> 加宽加粗 <span class="token punctuation">&amp;</span> <span class="token function selector">\textbf</span><span class="token punctuation">{</span>Bold extended<span class="token punctuation">}</span> <span class="token function selector">\\</span>
+无衬线 <span class="token punctuation">&amp;</span> <span class="token function selector">\textsf</span><span class="token punctuation">{</span>Sans serif<span class="token punctuation">}</span> <span class="token punctuation">&amp;</span> 意大利 <span class="token punctuation">&amp;</span> <span class="token function selector">\textit</span><span class="token punctuation">{</span>italic<span class="token punctuation">}</span> <span class="token punctuation">&amp;</span> 中等 <span class="token punctuation">&amp;</span> <span class="token function selector">\textmd</span><span class="token punctuation">{</span>Medium<span class="token punctuation">}</span> <span class="token function selector">\\</span>
+打字机 <span class="token punctuation">&amp;</span> <span class="token function selector">\texttt</span><span class="token punctuation">{</span>Typewritter<span class="token punctuation">}</span> <span class="token punctuation">&amp;</span> 倾斜 <span class="token punctuation">&amp;</span> <span class="token function selector">\textsl</span><span class="token punctuation">{</span>slanted<span class="token punctuation">}</span> <span class="token punctuation">&amp;</span> <span class="token punctuation">&amp;</span> <span class="token function selector">\\</span>
+<span class="token punctuation">&amp;</span> <span class="token punctuation">&amp;</span> 小型大写 <span class="token punctuation">&amp;</span> <span class="token function selector">\textsc</span><span class="token punctuation">{</span>SMALL CAPITALS<span class="token punctuation">}</span> <span class="token punctuation">&amp;</span> <span class="token punctuation">&amp;</span> <span class="token function selector">\\</span>
+<span class="token function selector">\hline</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">tabular</span><span class="token punctuation">}</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/font.png" width="80%">
+</div>
+<p>这就是 LaTeX 中基本的字体。其中无衬线字体主要用于幻灯片展示，因为在距离较远的情况下，衬线对文字形状的识别没有任何用处，所以用无衬线字体来提升观众对文字的识别（所以不要再用宋体和 Times New Roman 做幻灯片了）。打字机字体具有字体等宽的性质，适合排版代码和抄录，方便对齐。意大利和加粗一般用于强调，意大利还可以用于引用他人的文字。通常情况下，罗马字体族就可以满足我们的大部分要求。一个文档中最好不要出现三种以上完全不同的字体，那样会显得非常杂乱。</p>
+<p>在汉语中也有对应的字体划分方法。一般罗马就是宋体，意大利是楷体，打字机是仿宋（毕竟汉字全部都等宽），加宽加粗还有无衬线都是黑体。现在大家要明白一点，加粗并不只是把原来的文字加粗，而是用另一种字体来起到你想达到的效果。以上这三种字体的配合基本上就可以满足学术文档中的全部需求了。我们举一个例子：</p>
+<pre class="language-LaTeX"><span class="token function selector">\documentclass</span><span class="token punctuation">{</span><span class="token keyword">ctexart</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">tabular</span><span class="token punctuation">}</span><span class="token punctuation">{</span>|ll|ll|ll|<span class="token punctuation">}</span>
+<span class="token function selector">\hline</span>
+字体族 <span class="token punctuation">&amp;</span> 效果 <span class="token punctuation">&amp;</span> 字体形状 <span class="token punctuation">&amp;</span> 效果 <span class="token punctuation">&amp;</span> 字体系列 <span class="token punctuation">&amp;</span> 效果 <span class="token function selector">\\</span>
+<span class="token function selector">\hline</span>
+罗马 <span class="token punctuation">&amp;</span> <span class="token function selector">\textrm</span><span class="token punctuation">{</span>Roman<span class="token punctuation">}</span> <span class="token punctuation">&amp;</span> 直立 <span class="token punctuation">&amp;</span> <span class="token function selector">\textup</span><span class="token punctuation">{</span>upright<span class="token punctuation">}</span> <span class="token punctuation">&amp;</span> 加宽加粗 <span class="token punctuation">&amp;</span> <span class="token function selector">\text</span>    bf<span class="token punctuation">{</span>Bold extended<span class="token punctuation">}</span> <span class="token function selector">\\</span>
+无衬线 <span class="token punctuation">&amp;</span> <span class="token function selector">\textsf</span><span class="token punctuation">{</span>Sans serif<span class="token punctuation">}</span> <span class="token punctuation">&amp;</span> 意大利 <span class="token punctuation">&amp;</span> <span class="token function selector">\textit</span><span class="token punctuation">{</span>italic<span class="token punctuation">}</span> <span class="token punctuation">&amp;</span> 中等 <span class="token punctuation">&amp;</span> <span class="token function selector">\ </span>   textmd<span class="token punctuation">{</span>Medium<span class="token punctuation">}</span> <span class="token function selector">\\</span>
+打字机 <span class="token punctuation">&amp;</span> <span class="token function selector">\texttt</span><span class="token punctuation">{</span>Typewritter<span class="token punctuation">}</span> <span class="token punctuation">&amp;</span> 倾斜 <span class="token punctuation">&amp;</span> <span class="token function selector">\textsl</span><span class="token punctuation">{</span>slanted<span class="token punctuation">}</span> <span class="token punctuation">&amp;</span> <span class="token punctuation">&amp;</span> <span class="token function selector">\\</span>
+<span class="token punctuation">&amp;</span> <span class="token punctuation">&amp;</span> 小型大写 <span class="token punctuation">&amp;</span> <span class="token function selector">\textsc</span><span class="token punctuation">{</span>SMALL CAPITALS<span class="token punctuation">}</span> <span class="token punctuation">&amp;</span> <span class="token punctuation">&amp;</span> <span class="token function selector">\\</span>
+<span class="token function selector">\hline</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">tabular</span><span class="token punctuation">}</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/ziti.png" width="80%">
+</div>
+<p>另外，如果要给一个词语着重强调，可以使用<code>\emph</code>命令。它会把相应的文字改变成意大利形状。例如上图中的“斜体强调”就可以用“\emph{斜体强调}”来表达。</p>
+<h3 class="mume-header" id="%E5%B8%B8%E7%94%A8%E6%8E%92%E7%89%88%E6%95%88%E6%9E%9C">常用排版效果</h3>
+
+<p>自此，对于单纯的文字文档，你应该可以像使用 Word 一样熟练地使用 LaTeX 来排版了。这里我们再介绍一些简单常用的排版命令，大家可以自己随便找一些文字来试着排版一下。</p>
+<ol>
+<li><strong>脚注</strong>。脚注的命令是 \footnote{脚注内容}，只要跟在需要注的文字后面，就可以在那一页底部产生一个脚注。</li>
+<li><strong>强调</strong>。这个之前已经介绍过了，\emph{强调内容}，效果是用 italic 形状排版这些文字。</li>
+<li><strong>修改行距</strong>。在导言区使用\linespread{倍数}，可将全文的行距进行调整。默认情况下采用的是基本行距，这一行距指的是从上一行的基线到下一行的基线之间的距离，而不是每一行底部到下一行顶部的距离。</li>
+<li><strong>靠左、靠右、居中</strong>。这三个命令都是针对段落的，首先要把需要处理的段落用大括号括起来，然后在开头加上 \raggedright，\raggedleft 和 \centering，分别对应靠左、靠右、居中。</li>
+</ol>
+<p>最后再介绍两个环境吧。一个是计数列表，一个是无序列表。计数列表的环境名称是 enumerate，无序列表的环境名称是 itemize。下面是示例：</p>
+<pre class="language-LaTeX"><span class="token function selector">\documentclass</span><span class="token punctuation">{</span><span class="token keyword">ctexart</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+计数的列表大概长这样：
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">enumerate</span><span class="token punctuation">}</span>
+<span class="token function selector">\item</span> 这是
+<span class="token function selector">\item</span> 一个
+<span class="token function selector">\item</span> 计数
+<span class="token function selector">\item</span> 列表
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">enumerate</span><span class="token punctuation">}</span>
+
+无序列表是这样的：
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">itemize</span><span class="token punctuation">}</span>
+<span class="token function selector">\item</span> 这个
+<span class="token function selector">\item</span> 列表
+<span class="token function selector">\item</span> 没有
+<span class="token function selector">\item</span> 计数
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">itemize</span><span class="token punctuation">}</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/2lists.png" width="80%">
+</div>
+<p>这两个环境都用 \item 作为新的一行的开始。如果要多级列表的话在里面再包裹一个环境就行了。</p>
+<h3 class="mume-header" id="%E6%96%87%E6%A1%A3%E7%BB%93%E6%9E%84%E5%8C%96">文档结构化</h3>
+
+<p>我们有时候更需要的是一个结构化的文档。它可以分不同的小节，小节与小节之间还需要有不同的层次，比如第几大点第几小点（像领导讲话一样）。如果我们在写作的时候能有一个提纲，那么写作的思路就会更加清晰，文档也更加简洁易懂。</p>
+<p>在 ctexart/article 文类中，LaTeX 提供了如下的小标题级别和对应的命令：</p>
+<ol>
+<li>section（\section{节标题}）</li>
+<li>subsection（\subsection{小节标题}）</li>
+<li>subsubsection（\subsubsection{小小节标题}）</li>
+<li>paragraph（\paragraph{段落标题}）</li>
+<li>subparagraph（\subparagraph{小段落标题}）</li>
+</ol>
+<p>其中前三个级别是有编号的，后两个则没有编号，效果大概是这样的：</p>
+<pre class="language-LaTeX"><span class="token function selector">\documentclass</span><span class="token punctuation">{</span><span class="token keyword">ctexart</span><span class="token punctuation">}</span>
+<span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">lipsum</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+<span class="token function selector">\section</span><span class="token punctuation">{</span><span class="token headline class-name">节</span><span class="token punctuation">}</span>
+<span class="token function selector">\lipsum</span><span class="token punctuation">[</span>1-2<span class="token punctuation">]</span>
+<span class="token function selector">\subsection</span><span class="token punctuation">{</span><span class="token headline class-name">小节</span><span class="token punctuation">}</span>
+<span class="token function selector">\lipsum</span><span class="token punctuation">[</span>3-4<span class="token punctuation">]</span>
+<span class="token function selector">\subsubsection</span><span class="token punctuation">{</span><span class="token headline class-name">小小节</span><span class="token punctuation">}</span>
+<span class="token function selector">\lipsum</span><span class="token punctuation">[</span>5-6<span class="token punctuation">]</span>
+<span class="token function selector">\paragraph</span><span class="token punctuation">{</span><span class="token headline class-name">段落</span><span class="token punctuation">}</span>
+<span class="token function selector">\lipsum</span><span class="token punctuation">[</span>7-8<span class="token punctuation">]</span>
+<span class="token function selector">\subparagraph</span><span class="token punctuation">{</span><span class="token headline class-name">小段落</span><span class="token punctuation">}</span>
+<span class="token function selector">\section</span><span class="token punctuation">{</span><span class="token headline class-name">又一节</span><span class="token punctuation">}</span>
+<span class="token function selector">\lipsum</span><span class="token punctuation">[</span>9-10<span class="token punctuation">]</span>
+<span class="token function selector">\subsection</span><span class="token punctuation">{</span>又一小节
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/ex6.png" width="80%">
+</div>
+<p>在一般情况下，三级编号五级结构已经足够大家使用了，太深的组织结构会让读者觉得很乱，也会把文字打得很散，不利于表现主题。在编译的过程中， 引擎会自动为这个节标题进行编号。这是一个非常好用的特性。如果你的文章有十个 section，你想在第二个和第三个之间加入一个 section ，只需要直接往里面加就行了，完全不用考虑编号的事。再比如有几个 section 你想要加深一级变成 subsection，再合并成一个 section，在 LaTeX 这种组织结构下可以很轻松地完成。如果是手打的编号的话，大家可以自行想象一下编号改动的工作量，我反正是不敢想。</p>
+<p>在 ctexrep/report 和 ctexbook/book 文类中，会有更高的音节级别，比如 part，chapter 之类。chapter 在学术论文的写作中还算常用，比 section 高一个级别，如果篇幅比较大的话可以更有效地组织文档。写作学术论文的时候一般会有模板可以使用，这时只要按照模板的说明操作就可以了，这里列出仅供参考。</p>
+<h3 class="mume-header" id="%E6%A0%87%E7%AD%BE%E4%B8%8E%E4%BA%A4%E5%8F%89%E5%BC%95%E7%94%A8">标签与交叉引用</h3>
+
+<p>在行文过程中，我们可能需要引用自己前面写过的结果。比如“在第一章第5节我们提到……”“请参见我在第327页做的推导……”之类的。在这种情况下，自动化的需求是非常高的。如果说我手动输入了这些数字，那么一旦文档结构有变动，产生的工作量将非常可观。这些东西你还不能不改，因为你不改的话完全就是错的，本来想引用第3节结果写的是“见第2节”。但这在 LaTeX 中完全不是问题。我们可以用**标签(label)<strong>和</strong>交叉引用(cross reference)**来解决这个问题。</p>
+<p>标签和交叉引用的基本思路是这样的。首先把我需要引用的章节用 \label{标签名称} 进行标记，然后在需要引用它的时候用 \ref{标签名称} 进行引用。这样一来，引擎在进行编译的时候就需要编译两次：第一次生成所有章节的编号，第二次再把这些编号填充到相应的位置。所以如果使用了这个命令但只编译了一次，这些引用的地方都将显示为问号。这对所有交叉引用都是一样的。道理很简单，引擎每编译一次就把整个源码读一遍，而只读一遍是没有办法知道被引用的章节编号是多少的（尤其是在前面引用后面的章节）。所以引擎在读第一遍的时候就把需要引用的地方都做上标记，第二次再来处理。下面我们来看一个使用的例子：</p>
+<pre class="language-LaTeX"><span class="token function selector">\documentclass</span><span class="token punctuation">{</span><span class="token keyword">ctexart</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+<span class="token function selector">\section</span><span class="token punctuation">{</span><span class="token headline class-name">前言</span><span class="token punctuation">}</span>
+<span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">sec:introduction</span><span class="token punctuation">}</span>
+这里是说在前面的话。<span class="token function selector">\LaTeX</span> 是一个非常棒的排版工具。我在第 <span class="token function selector">\ref</span><span class="token punctuation">{</span><span class="token keyword">sec:detail</span><span class="token punctuation">}</span> 节中会有详细的论述。
+<span class="token function selector">\section</span><span class="token punctuation">{</span><span class="token headline class-name">\LaTeX 介绍</span><span class="token punctuation">}</span>
+<span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">sec:detail</span><span class="token punctuation">}</span>
+我在第 <span class="token function selector">\ref</span><span class="token punctuation">{</span><span class="token keyword">sec:introduction</span><span class="token punctuation">}</span> 节中提到，<span class="token function selector">\LaTeX</span> 是一个非常好的排版工具，下面进行详细的论述。
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/crossref.png" width="80%">
+</div>
+<p>如果这个时候我在这两节之间加入了新的一节，LaTeX 介绍就变成了第3节，那么我们不需要复杂的操作，该写什么写什么就行了。例子如下：</p>
+<pre class="language-LaTeX"><span class="token function selector">\documentclass</span><span class="token punctuation">{</span><span class="token keyword">ctexart</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+<span class="token function selector">\section</span><span class="token punctuation">{</span><span class="token headline class-name">前言</span><span class="token punctuation">}</span>
+<span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">sec:introduction</span><span class="token punctuation">}</span>
+这里是说在前面的话。<span class="token function selector">\LaTeX</span> 是一个非常棒的排版工具。我在第 <span class="token function selector">\ref</span><span class="token punctuation">{</span><span class="token keyword">sec:detail</span><span class="token punctuation">}</span> 节中会有详细的论述。
+<span class="token function selector">\section</span><span class="token punctuation">{</span><span class="token headline class-name">新的一节</span><span class="token punctuation">}</span>
+刚刚忘了这一节，现在把它加上。
+<span class="token function selector">\section</span><span class="token punctuation">{</span><span class="token headline class-name">\LaTeX 介绍</span><span class="token punctuation">}</span>
+<span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">sec:detail</span><span class="token punctuation">}</span>
+我在第 <span class="token function selector">\ref</span><span class="token punctuation">{</span><span class="token keyword">sec:introduction</span><span class="token punctuation">}</span> 节中提到，<span class="token function selector">\LaTeX</span> 是一个非常好的排版工具，下面进行详细的论述。
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/crossref2.png" width="80%">
+</div>
+<p>大家可以注意到，除了第6行和第7行之外，我什么也没有改。这就是 LaTeX 给我们提供的便利，只要标签打好了，引用的是什么就交给引擎来做吧。</p>
+<p>另外这里还有一个需求，就是我在读到这个引用的时候想跳转到被引用的地方去看一看，该怎么办呢？这里我们可以使用 hyperref 宏包，下面举一个例子（这里加上了 colorlinks 选项，方便大家看清楚）：</p>
+<pre class="language-LaTeX"><span class="token function selector">\documentclass</span><span class="token punctuation">{</span><span class="token keyword">ctexart</span><span class="token punctuation">}</span>
+<span class="token function selector">\usepackage</span><span class="token punctuation">[</span>colorlinks=true<span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token keyword">hyperref</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+<span class="token function selector">\section</span><span class="token punctuation">{</span><span class="token headline class-name">前言</span><span class="token punctuation">}</span>
+<span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">sec:introduction</span><span class="token punctuation">}</span>
+这里是说在前面的话。<span class="token function selector">\LaTeX</span> 是一个非常棒的排版工具。我在第 <span class="token function selector">\ref</span><span class="token punctuation">{</span><span class="token keyword">sec:detail</span><span class="token punctuation">}</span> 节中会有详细的论述。
+<span class="token function selector">\section</span><span class="token punctuation">{</span><span class="token headline class-name">\LaTeX 介绍</span><span class="token punctuation">}</span>
+<span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">sec:detail</span><span class="token punctuation">}</span>
+我在第 <span class="token function selector">\ref</span><span class="token punctuation">{</span><span class="token keyword">sec:introduction</span><span class="token punctuation">}</span> 节中提到，<span class="token function selector">\LaTeX</span> 是一个非常好的排版工具，下面进行详细的论述。
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/colorlink.png" width="80%">
+</div>
+<p>这个时候红色的标记就可以在阅读时用鼠标点击，会直接跳转到被引用的地方。</p>
+<p>对于标签再多啰嗦两句。标签的命名非常重要，如果还命名成1，2，3这些数字的话，就完全失去了标签的意义了。标签最好要能体现被引段落的内容，这样你在引用的时候就会想起，我要引用的是什么内容，然后打出相应的标签。这是一个非常好的习惯，尤其是在管理特别大的文档的时候。</p>
+<h3 class="mume-header" id="%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9">如何获取帮助</h3>
+
+<p>就像你买的洗衣机、电视机、照相机有说明书一样，每个软件也有说明书，我们称之为<strong>文档(documentation)</strong>。对于 LaTeX 的基本命令的使用，我在电脑上装了一个软件 Dash，它专门用于看各种文档，里面就包含 LaTeX 的文档。比如刚刚我们介绍的交叉引用及其相关命令，就可以在其中搜索到。</p>
+<p>遇到关于 LaTeX 自带命令不知道怎么使用时，就可以用这个工具来进行一些查询。没有 Dash 也没有关系，直接打开 Google 或者 Bing 之类的搜索引擎把相关的命令打进去一定能找到结果。</p>
+<p>还有一些情况下，是你需要使用一个宏包，但是不知道相关的功能怎么使用。这个时候我们就需要命令行工具（Windows 下的 cmd，macOS、OS X、*nix下的 shell）了。在其中输入“texdoc 宏包名”就可以查阅宏包的文档，里面有详细的使用说明，在提出更多问题之前一定要好好阅读。比如我们要查刚刚使用的宏包 hyperref 的文档，就可以在命令行输入“texdoc hyperref”，一个回车下去就会跳出一个 PDF 文档，那就是你要的说明书。</p>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/texdoc.png" width="80%">
+</div>
+<p>如果你只是想要实现一个功能，既不知道用什么命令，也不知道用什么宏包，那么这个时候你需要 Google。到搜索引擎中去把你想要的功能加上 LaTeX 作为关键词就可以搜到很多有用的资料。在阅读这些资料的时候一定要注意两点：（1）最好阅读英文，更容易找到你要的内容；（2）注意时效性，太旧的文章要辩证接受。当你知道相关的命令和相关的宏包时，你就可以在本地查阅相关的文档了。</p>
+<p>如果你找遍了搜索引擎和文档都没有自己想要的，这时就可以选一个社区去提问了。LaTeX 是一个开源软件，拥有完善的文档体系和庞大的社区，只要你有需要，基本都可以得到帮助解决。</p>
+<p>另外，如果你手上有一本合适的参考书，也最好先仔细阅读，对 LaTeX 有一个基本的掌握，你阅读文档搜索帮助的效率会更高。</p>
+<h3 class="mume-header" id="%E5%88%B6%E4%BD%9C%E7%9B%AE%E5%BD%95">制作目录</h3>
+
+<p>上面我们提到了如何在 LaTeX 中安排文档的组织结构，现在我们需要给它们来一个集合，就是制作目录。制作目录其实非常简单，只需要一个命令，就是 \tableofcontents 。这个命令放在哪里，目录就会出现在哪里。和交叉引用相同的一个特点是，目录的排版也需要两次编译。一方面是因为其中涉及到页码，另一方面是涉及到各个章节的标题。我们继续用上次的源代码给大家举例。</p>
+<pre class="language-LaTeX"><span class="token function selector">\documentclass</span><span class="token punctuation">{</span><span class="token keyword">ctexart</span><span class="token punctuation">}</span>
+<span class="token function selector">\usepackage</span><span class="token punctuation">[</span>colorlinks=true<span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token keyword">hyperref</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+<span class="token function selector">\tableofcontents</span>
+<span class="token function selector">\section</span><span class="token punctuation">{</span><span class="token headline class-name">前言</span><span class="token punctuation">}</span>
+<span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">sec:introduction</span><span class="token punctuation">}</span>
+这里是说在前面的话。<span class="token function selector">\LaTeX</span> 是一个非常棒的排版工具。我在第 <span class="token function selector">\ref</span><span class="token punctuation">{</span><span class="token keyword">sec:detail</span><span class="token punctuation">}</span> 节中会有详细的论述。
+<span class="token function selector">\section</span><span class="token punctuation">{</span><span class="token headline class-name">\LaTeX 介绍</span><span class="token punctuation">}</span>
+<span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">sec:detail</span><span class="token punctuation">}</span>
+我在第 <span class="token function selector">\ref</span><span class="token punctuation">{</span><span class="token keyword">sec:introduction</span><span class="token punctuation">}</span> 节中提到，<span class="token function selector">\LaTeX</span> 是一个非常好的排版工具，下面进行详细的论述。
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/content1.png" width="80%">
+</div>
+<p>目录的内容显示为红色，是因为 hyperref 宏包的 colorlinks 选项。我们以后将默认载入这个宏包，告诉大家这些红色的文字都是可以点击跳转的，这也是我非常喜欢的一个特性。</p>
+<p>如果我们使用带星号的章节命令，这个章节将不编号也不编目。这个时候对应的标签会被打到上一个章节中去，所以如果你用了这样的章节，就不要用交叉引用啦。效果如下：</p>
+<pre class="language-LaTeX"><span class="token function selector">\documentclass</span><span class="token punctuation">{</span><span class="token keyword">ctexart</span><span class="token punctuation">}</span>
+<span class="token function selector">\usepackage</span><span class="token punctuation">[</span>colorlinks=true<span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token keyword">hyperref</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+<span class="token function selector">\tableofcontents</span>
+<span class="token function selector">\section</span><span class="token punctuation">{</span><span class="token headline class-name">前言</span><span class="token punctuation">}</span>
+<span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">sec:introduction</span><span class="token punctuation">}</span>
+这里是说在前面的话。<span class="token function selector">\LaTeX</span> 是一个非常棒的排版工具。我在第 <span class="token function selector">\ref</span><span class="token punctuation">{</span><span class="token keyword">sec:detail</span><span class="token punctuation">}</span> 节中会有详细的论述。
+<span class="token function selector">\section*</span><span class="token punctuation">{</span><span class="token headline class-name">\LaTeX 介绍</span><span class="token punctuation">}</span>
+<span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">sec:detail</span><span class="token punctuation">}</span>
+我在第 <span class="token function selector">\ref</span><span class="token punctuation">{</span><span class="token keyword">sec:introduction</span><span class="token punctuation">}</span> 节中提到，<span class="token function selector">\LaTeX</span> 是一个非常好的排版工具，下面进行详细的论述。
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/content2.png" width="80%">
+</div>
+<h3 class="mume-header" id="%E6%8F%92%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F">插入数学公式</h3>
+
+<p>首先恭喜你看到这里。如果前面的几个文档你都认真编译过了，那么你已经可以胜任许多文档的排版工作。下面我们进入 LaTeX 最为犀利的部分。</p>
+<p>这部分的演示中，为了节省篇幅，将取消导言区中中文支持的部分。在实际使用中，你只需要将导言区中的相关部分加上，就可以同时使用中文，并编写数学公式了——这并不冲突。</p>
+<p>为了使用 AMS-LaTeX 提供的数学功能，我们需要在导言区加载 amsmath 宏包：</p>
+<pre class="language-LaTeX"><span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">amsmath</span><span class="token punctuation">}</span>
+</pre>
+<h4 class="mume-header" id="%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%BC%8F">数学模式</h4>
+
+<p>LaTeX 的数学模式有两种：行内模式 (inline) 和行间模式 (display)。前者在正文的行文中，插入数学公式；后者独立排列单独成行，并自动居中。</p>
+<p>在行文中，使用 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">...</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.10556em;"></span><span class="strut bottom" style="height:0.10556em;vertical-align:0em;"></span><span class="base"><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span></span></span></span> 可以插入行内公式，使用 <span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">...</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.10556em;"></span><span class="strut bottom" style="height:0.10556em;vertical-align:0em;"></span><span class="base"><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span></span></span></span></span> 可以插入行间公式，如果需要对行间公式进行编号，则可以使用 equation 环境：</p>
+<pre class="language-LaTeX"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">equation</span><span class="token punctuation">}</span><span class="token equation string">
+...
+</span><span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">equation</span><span class="token punctuation">}</span>
+</pre>
+<p>行内公式也可以使用 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">...</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.10556em;"></span><span class="strut bottom" style="height:0.10556em;vertical-align:0em;"></span><span class="base"><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span></span></span></span> 或者 \begin{math} ... \end{math} 来插入，但略显麻烦。</p>
+<p>无编号的行间公式也可以使用 \begin{displaymath} ... \end{displaymath} 或者 \begin{equation*} ... \end{equation*} 来插入，但略显麻烦。（equation* 中的 * 表示环境不编号）</p>
+<p>也有 plainTeX 风格的（用$$包裹） 来插入不编号的行间公式。但是在 LaTeX 中这样做会改变行文的默认行间距，并不推荐。</p>
+<h4 class="mume-header" id="%E4%B8%8A%E4%B8%8B%E6%A0%87">上下标</h4>
+
+<p>实例代码</p>
+<pre class="language-LaTeX"><span class="token function selector">\documentclass</span><span class="token punctuation">{</span><span class="token keyword">article</span><span class="token punctuation">}</span>
+<span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">amsmath</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+Einstein 's <span class="token equation string">$E=mc^2$</span>.
+
+<span class="token equation string">\[ E=mc^2. \]</span>
+
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">equation</span><span class="token punctuation">}</span><span class="token equation string">
+E=mc^2.
+</span><span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">equation</span><span class="token punctuation">}</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+</pre>
+<p>在这里提一下关于公式标点使用的规范。行内公式和行间公式对标点的要求是不同的：行内公式的标点，应该放在数学模式的限定符之外，而行间公式则应该放在数学模式限定符之内。</p>
+<p>在数学模式中，需要表示上标，可以使用 ^ 来实现（下标则是 _）。它默认只作用于之后的一个字符，如果想对连续的几个字符起作用，请将这些字符用花括号 {} 括起来，例如：</p>
+<pre class="language-LaTeX"><span class="token equation string">\[ z = r<span class="token equation-command regex">\cdot</span> e^{2<span class="token equation-command regex">\pi</span> i}. \]</span>
+</pre>
+<h4 class="mume-header" id="%E6%A0%B9%E5%BC%8F%E4%B8%8E%E5%88%86%E5%BC%8F">根式与分式</h4>
+
+<p>根式用 \sqrt{·} 来表示，分式用 \frac{·}{·} 来表示（第一个参数为分子，第二个为分母）。</p>
+<p>示例代码（请保存后，使用 XeLaTeX 编译，查看效果）：</p>
+<pre class="language-LaTeX"><span class="token function selector">\documentclass</span><span class="token punctuation">{</span><span class="token keyword">article</span><span class="token punctuation">}</span>
+<span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">amsmath</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+<span class="token equation string">$<span class="token equation-command regex">\sqrt</span>{x}$</span>, <span class="token equation string">$<span class="token equation-command regex">\frac</span>{1}{2}$</span>.
+
+<span class="token equation string">\[ <span class="token equation-command regex">\sqrt</span>{x}, \]</span>
+
+<span class="token equation string">\[ <span class="token equation-command regex">\frac</span>{1}{2}. \]</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/fractions.png" width="80%">
+</div>
+<p>可以发现，在行间公式和行内公式中，分式的输出效果是有差异的。如果要强制行内模式的分式显示为行间模式的大小，可以使用 \dfrac, 反之可以使用 \tfrac。</p>
+<blockquote>
+<p>在行内写分式，你可能会喜欢 xfrac 宏包提供的 \sfrac 命令的效果。</p>
+<p>排版繁分式，你应该使用 \cfrac 命令。</p>
+</blockquote>
+<h4 class="mume-header" id="%E8%BF%90%E7%AE%97%E7%AC%A6">运算符</h4>
+
+<p>一些小的运算符，可以在数学模式下直接输入；另一些需要用控制序列生成，如：</p>
+<pre class="language-LaTeX"><span class="token equation string">\[
+<span class="token equation-command regex">\pm</span><span class="token equation-command regex">\;</span> <span class="token equation-command regex">\times</span> <span class="token equation-command regex">\;</span> <span class="token equation-command regex">\div</span><span class="token equation-command regex">\;</span> <span class="token equation-command regex">\cdot</span><span class="token equation-command regex">\;</span> <span class="token equation-command regex">\cap</span><span class="token equation-command regex">\;</span> <span class="token equation-command regex">\cup</span><span class="token equation-command regex">\;</span>
+<span class="token equation-command regex">\geq</span><span class="token equation-command regex">\;</span> <span class="token equation-command regex">\leq</span><span class="token equation-command regex">\;</span> <span class="token equation-command regex">\neq</span><span class="token equation-command regex">\;</span> <span class="token equation-command regex">\approx</span> <span class="token equation-command regex">\;</span> <span class="token equation-command regex">\equiv</span>
+\]</span>
+</pre>
+<p>连加、连乘、极限、积分等大型运算符分别用 \sum, \prod, \lim, \int生成。他们的上下标在行内公式中被压缩，以适应行高。我们可以用 \limits 和 \nolimits 来强制显式地指定是否压缩这些上下标。例如：</p>
+<pre class="language-LaTeX"><span class="token equation string">$ <span class="token equation-command regex">\sum</span>_{i=1}^n i<span class="token equation-command regex">\quad</span> <span class="token equation-command regex">\prod</span>_{i=1}^n $</span>
+<span class="token equation string">$ <span class="token equation-command regex">\sum</span><span class="token equation-command regex">\limits</span> _{i=1}^n i<span class="token equation-command regex">\quad</span> <span class="token equation-command regex">\prod</span><span class="token equation-command regex">\limits</span> _{i=1}^n $</span>
+<span class="token equation string">\[ <span class="token equation-command regex">\lim</span>_{x<span class="token equation-command regex">\to</span>0}x^2 <span class="token equation-command regex">\quad</span> <span class="token equation-command regex">\int</span>_a^b x^2 dx \]</span>
+<span class="token equation string">\[ <span class="token equation-command regex">\lim</span><span class="token equation-command regex">\nolimits</span> _{x<span class="token equation-command regex">\to</span>0}x^2<span class="token equation-command regex">\quad</span> <span class="token equation-command regex">\int</span><span class="token equation-command regex">\nolimits</span>_a^b x^2 dx \]</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/operators.png" width="80%">
+</div>
+<p>多重积分可以使用 \iint, \iiint, \iiiint, \idotsint 等命令输入。</p>
+<pre class="language-LaTeX"><span class="token equation string">\[ <span class="token equation-command regex">\iint</span><span class="token equation-command regex">\quad</span> <span class="token equation-command regex">\iiint</span><span class="token equation-command regex">\quad</span> <span class="token equation-command regex">\iiiint</span><span class="token equation-command regex">\quad</span> <span class="token equation-command regex">\idotsint</span> \]</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/operator.png" width="80%">
+</div>
+<h4 class="mume-header" id="%E5%AE%9A%E7%95%8C%E7%AC%A6%E6%8B%AC%E5%8F%B7%E7%AD%89">定界符（括号等）</h4>
+
+<p>各种括号用 (), [], {}, \langle\rangle 等命令表示；注意花括号通常用来输入命令和环境的参数，所以在数学公式中它们前面要加 \。因为 LaTeX 中 | 和 | 的应用过于随意，amsmath 宏包推荐用 \lvert\rvert 和 \lVert\rVert 取而代之。</p>
+<p>为了调整这些分隔符的大小，amsmath宏包推荐使用 \big, \Big, \bigg, \Bigg 等一系列命令放在上述括号前面调整大小。</p>
+<pre class="language-LaTeX"><span class="token equation string">\[ <span class="token equation-command regex">\Biggl</span>(<span class="token equation-command regex">\biggl</span>(<span class="token equation-command regex">\Bigl</span>(<span class="token equation-command regex">\bigl</span>((x)<span class="token equation-command regex">\bigr</span>)<span class="token equation-command regex">\Bigr</span>)<span class="token equation-command regex">\biggr</span>)<span class="token equation-command regex">\Biggr</span>) \]</span>
+<span class="token equation string">\[ <span class="token equation-command regex">\Biggl</span>[<span class="token equation-command regex">\biggl</span>[<span class="token equation-command regex">\Bigl</span>[<span class="token equation-command regex">\bigl</span>[[x]<span class="token equation-command regex">\bigr</span>]<span class="token equation-command regex">\Bigr</span>]<span class="token equation-command regex">\biggr</span>]<span class="token equation-command regex">\Biggr</span>] \]</span>
+<span class="token equation string">\[ <span class="token equation-command regex">\Biggl</span> <span class="token equation-command regex">\{</span><span class="token equation-command regex">\biggl</span> <span class="token equation-command regex">\{</span><span class="token equation-command regex">\Bigl</span> <span class="token equation-command regex">\{</span><span class="token equation-command regex">\bigl</span> <span class="token equation-command regex">\{</span><span class="token equation-command regex">\{</span>x<span class="token equation-command regex">\}</span><span class="token equation-command regex">\bigr</span> <span class="token equation-command regex">\}</span><span class="token equation-command regex">\Bigr</span> <span class="token equation-command regex">\}</span><span class="token equation-command regex">\biggr</span> <span class="token equation-command regex">\}</span><span class="token equation-command regex">\Biggr</span><span class="token equation-command regex">\}</span> \]</span>
+<span class="token equation string">\[ <span class="token equation-command regex">\Biggl</span><span class="token equation-command regex">\langle</span><span class="token equation-command regex">\biggl</span><span class="token equation-command regex">\langle</span><span class="token equation-command regex">\Bigl</span><span class="token equation-command regex">\langle</span><span class="token equation-command regex">\bigl</span><span class="token equation-command regex">\langle</span><span class="token equation-command regex">\langle</span> x
+<span class="token equation-command regex">\rangle</span><span class="token equation-command regex">\bigr</span><span class="token equation-command regex">\rangle</span><span class="token equation-command regex">\Bigr</span><span class="token equation-command regex">\rangle</span><span class="token equation-command regex">\biggr</span><span class="token equation-command regex">\rangle</span><span class="token equation-command regex">\Biggr</span><span class="token equation-command regex">\rangle</span> \]</span>
+<span class="token equation string">\[ <span class="token equation-command regex">\Biggl</span><span class="token equation-command regex">\lvert</span><span class="token equation-command regex">\biggl</span><span class="token equation-command regex">\lvert</span><span class="token equation-command regex">\Bigl</span><span class="token equation-command regex">\lvert</span><span class="token equation-command regex">\bigl</span><span class="token equation-command regex">\lvert</span><span class="token equation-command regex">\lvert</span> x
+<span class="token equation-command regex">\rvert</span><span class="token equation-command regex">\bigr</span><span class="token equation-command regex">\rvert</span><span class="token equation-command regex">\Bigr</span><span class="token equation-command regex">\rvert</span><span class="token equation-command regex">\biggr</span><span class="token equation-command regex">\rvert</span><span class="token equation-command regex">\Biggr</span><span class="token equation-command regex">\rvert</span> \]</span>
+<span class="token equation string">\[ <span class="token equation-command regex">\Biggl</span><span class="token equation-command regex">\lVert</span><span class="token equation-command regex">\biggl</span><span class="token equation-command regex">\lVert</span><span class="token equation-command regex">\Bigl</span><span class="token equation-command regex">\lVert</span><span class="token equation-command regex">\bigl</span><span class="token equation-command regex">\lVert</span><span class="token equation-command regex">\lVert</span> x
+<span class="token equation-command regex">\rVert</span><span class="token equation-command regex">\bigr</span><span class="token equation-command regex">\rVert</span><span class="token equation-command regex">\Bigr</span><span class="token equation-command regex">\rVert</span><span class="token equation-command regex">\biggr</span><span class="token equation-command regex">\rVert</span><span class="token equation-command regex">\Biggr</span><span class="token equation-command regex">\rVert</span> \]</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/delimiter.png" height="250">
+</div>
+<h4 class="mume-header" id="%E7%9C%81%E7%95%A5%E5%8F%B7">省略号</h4>
+
+<p>省略号用 \dots, \cdots, \vdots, \ddots 等命令表示。\dots 和 \cdots 的纵向位置不同，前者一般用于有下标的序列。</p>
+<pre class="language-LaTeX"><span class="token equation string">\[ x_1,x_2,<span class="token equation-command regex">\dots</span> ,x_n<span class="token equation-command regex">\quad</span> 1,2,<span class="token equation-command regex">\cdots</span> ,n<span class="token equation-command regex">\quad</span>
+<span class="token equation-command regex">\vdots</span><span class="token equation-command regex">\quad</span> <span class="token equation-command regex">\ddots</span> \]</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/dots.png" width="80%">
+</div>
+<h4 class="mume-header" id="%E7%9F%A9%E9%98%B5">矩阵</h4>
+
+<p>amsmath 的 pmatrix, bmatrix, Bmatrix, vmatrix, Vmatrix 等环境可以在矩阵两边加上各种分隔符。</p>
+<pre class="language-LaTeX"><span class="token equation string">\[ <span class="token equation-command regex">\begin</span>{pmatrix} a&amp;b<span class="token equation-command regex">\\</span>c&amp;d <span class="token equation-command regex">\end</span>{pmatrix} <span class="token equation-command regex">\quad</span>
+<span class="token equation-command regex">\begin</span>{bmatrix} a&amp;b<span class="token equation-command regex">\\</span>c&amp;d <span class="token equation-command regex">\end</span>{bmatrix} <span class="token equation-command regex">\quad</span>
+<span class="token equation-command regex">\begin</span>{Bmatrix} a&amp;b<span class="token equation-command regex">\\</span>c&amp;d <span class="token equation-command regex">\end</span>{Bmatrix} <span class="token equation-command regex">\quad</span>
+<span class="token equation-command regex">\begin</span>{vmatrix} a&amp;b<span class="token equation-command regex">\\</span>c&amp;d <span class="token equation-command regex">\end</span>{vmatrix} <span class="token equation-command regex">\quad</span>
+<span class="token equation-command regex">\begin</span>{Vmatrix} a&amp;b<span class="token equation-command regex">\\</span>c&amp;d <span class="token equation-command regex">\end</span>{Vmatrix} \]</span>
+</pre>
+<p>效果图：</p>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/matrix.png" width="80%">
+</div>
+<p>使用 smallmatrix 环境，可以生成行内公式的小矩阵。</p>
+<pre class="language-LaTeX">I have a little matrix <span class="token equation string">$ ( <span class="token equation-command regex">\begin</span>{smallmatrix} a&amp;b<span class="token equation-command regex">\\</span>c&amp;d <span class="token equation-command regex">\end</span>{smallmatrix} ) $</span>.
+</pre>
+<p>效果图:</p>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/smallmatrix.png" width="80%">
+</div>
+<h4 class="mume-header" id="%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7">数学符号</h4>
+
+<p>首先要跟大家说明的是数学模式中的文字规范。在数学公式中，<strong>只有变量</strong>才使用<em>意大利体</em>。而数学常数 e、i，微分符号 d，函数名 sin、cos、log、ln 等都需要用<strong>罗马正体</strong>来表示。另外表示数集的字母 R、C、Q、N 等，需要用<strong>空心字体</strong>来表示。还有一些特殊的<strong>花体</strong>，使用场合比较有限，大家可以查阅相关的资料和书籍来了解使用方式。</p>
+<p>一般的拉丁字母大家都可以方便地用键盘输入。而数学中常用的希腊字母就不太好用美式键盘输入了。在 LaTeX 中输入小写希腊字母时，只需要用反斜杠加上字母的读音就可以输入相应的希腊字母了。比如用 \alpha 输入 α，用 \beta 输入 β 等。对应的大写字母只需要将读音的首字母大写即可（LaTeX 中提供的大写希腊字母只有11个，不过已经够用了）。通常我们还会用到希伯来字母 א，可以用 \aleph 来输入。</p>
+<p>对于特殊的符号，我们在这里作一个简单的列举，大家可以自己在电脑上尝试输入一下。</p>
+<ul>
+<li>普朗克常数，\hbar</li>
+<li>无穷符号，\infty</li>
+<li>空集符号，\emptyset（也可以调用 amssymb 宏包后使用 \varnothing）</li>
+<li>偏微分符号，\partial</li>
+<li>积分符号，\int，\iint，\iiint，\iiiint，分别对应一重、二重、三重、四重积分；更多重积分可以用 \idotsint</li>
+<li>环路积分符号，\oint</li>
+<li>求和符号，\sum</li>
+<li>求积符号，\prod</li>
+<li>交集符号，\cap；并集符号，\cup</li>
+<li>乘号，\times；除号，\div</li>
+<li>不等号，\neq；小于等于，\leq；大于等于，\geq；</li>
+<li>属于，\in；</li>
+</ul>
+<p>另外还有很多函数名，应该用罗马正体书写的，都可以用反斜杠加函数名来实现。比如 \sin，\cos，\log，\ln。还有一些算子也需要这样实现，如 \lim，\max、\min、\gcd 等。</p>
+<p>数学符号实在是太多了，变化也十分多样，以上只是一些非常基本的符号，篇幅所限没有办法囊括更多。大家可以去看《LaTeX 入门》的第四章了解更多数学符号的输入方式。对于一般的使用而言，上面的这些应该已经足够了。</p>
+<h4 class="mume-header" id="%E5%A4%9A%E8%A1%8C%E5%85%AC%E5%BC%8F">多行公式</h4>
+
+<p>有的公式特别长，我们需要手动为他们换行；有几个公式是一组，我们需要将他们放在一起；还有些类似分段函数，我们需要给它加上一个左边的花括号。</p>
+<h4 class="mume-header" id="%E9%95%BF%E5%85%AC%E5%BC%8F">长公式</h4>
+
+<ol>
+<li>不对齐</li>
+</ol>
+<p>无须对齐的长公式可以使用 multline 环境。</p>
+<pre class="language-LaTeX"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">multline</span><span class="token punctuation">}</span><span class="token equation string">
+x = a+b+c+{} <span class="token equation-command regex">\\</span>
+d+e+f+g
+</span><span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">multline</span><span class="token punctuation">}</span>
+</pre>
+<p>效果：</p>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/multline.png" width="80%">
+</div>
+<ol start="2">
+<li>对齐</li>
+</ol>
+<p>需要对齐的公式，可以使用 aligned 次环境来实现，它必须包含在数学环境之内。</p>
+<pre class="language-LaTeX"><span class="token equation string">\[
+<span class="token equation-command regex">\begin</span>{aligned}
+x ={}&amp; a+b+c+{} <span class="token equation-command regex">\\</span>
+&amp;d+e+f+g
+<span class="token equation-command regex">\end</span>{aligned}
+\]</span>
+</pre>
+<p>效果图：</p>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/aligned.png" width="80%">
+</div>
+<h4 class="mume-header" id="%E5%85%AC%E5%BC%8F%E7%BB%84">公式组</h4>
+
+<p>无需对齐的公式组可以使用 gather 环境，需要对齐的公式组可以使用 align 环境。他们都带有编号，如果不需要编号可以使用带星花的版本。</p>
+<pre class="language-LaTeX"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">gather</span><span class="token punctuation">}</span><span class="token equation string">
+a = b+c+d <span class="token equation-command regex">\\</span>
+x = y+z
+</span><span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">gather</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">align</span><span class="token punctuation">}</span><span class="token equation string">
+a &amp;= b+c+d <span class="token equation-command regex">\\</span>
+x &amp;= y+z
+</span><span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">align</span><span class="token punctuation">}</span>
+</pre>
+<p>效果：</p>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/gather.png" width="80%">
+</div>
+<p>如果我们是要把一个公式拆分成多行来书写，并给出一个单独的编号，那么上面的两个环境就不那么适用了。在这里为大家介绍 split 环境。split 环境需要嵌套在 equation 环境中使用，也支持像 align 环境中那样的对齐方式（但不能多列对齐），举例如下：</p>
+<pre class="language-LaTeX"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">equation</span><span class="token punctuation">}</span><span class="token equation string">
+<span class="token equation-command regex">\begin</span>{split}
+<span class="token equation-command regex">\cos</span> 2x &amp;= <span class="token equation-command regex">\cos</span>^2 x - <span class="token equation-command regex">\sin</span>^2 x <span class="token equation-command regex">\\</span>
+&amp;= 2<span class="token equation-command regex">\cos</span>^2 x - 1 <span class="token equation-command regex">\\</span>
+<span class="token equation-command regex">\end</span>{split}
+</span><span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">equation</span><span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/split.png" width="80%">
+</div>
+<p>请注意，永远不要使用 eqnarray 环境。原因如下：</p>
+<ul>
+<li><a href="https://faculty.math.illinois.edu/~hildebr/tex/displays.html">eqnarray 是糟糕的</a></li>
+<li><a href="http://texblog.net/latex-archive/maths/eqnarray-align-environment/">eqnarray 是有害的</a></li>
+<li><a href="http://www.tex.ac.uk/cgi-bin/texfaq2html?label=eqnarray">eqnarray 是恼人的</a></li>
+<li><a href="http://www.tug.org/pracjourn/2006-4/madsen/">eqnarray 是邪恶的</a></li>
+</ul>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/eqnarray.png" width="80%">
+</div>
+<h4 class="mume-header" id="%E5%88%86%E6%AE%B5%E5%87%BD%E6%95%B0">分段函数</h4>
+
+<p>分段函数可以用cases次环境来实现，它必须包含在数学环境之内。</p>
+<pre class="language-LaTeX">Otherwise, <span class="token equation string">$f_x(x)=0$</span>. That is,
+<span class="token equation string">\[
+f_x(x) = <span class="token equation-command regex">\begin</span>{cases}
+<span class="token equation-command regex">\dfrac</span>{x+1}{4} &amp; <span class="token equation-command regex">\text</span>{if } 0&lt;y&lt;1 <span class="token equation-command regex">\text</span>{ and } 0&lt;x&lt;2; <span class="token equation-command regex">\\</span>
+0 &amp; <span class="token equation-command regex">\text</span>{otherwise}.
+<span class="token equation-command regex">\end</span>{cases}
+\]</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/cases.png" width="80%">
+</div>
+<p>cases 环境有一个重大的缺陷，就是在每个 case 中，公式都会被变成行内公式。所以在这里我们用 \dfrac 命令来强制让分式变成行间公式。如果我们想简单地解决这个问题，就需要使用 mathtools 宏包定义的 dcases 环境，用法和 cases 完全相同，但是可以以行间公式的形式来排版每个 case。</p>
+<h3 class="mume-header" id="%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E5%92%8C%E8%A1%A8%E6%A0%BC">插入图片和表格</h3>
+
+<h4 class="mume-header" id="%E5%9B%BE%E7%89%87">图片</h4>
+
+<p>在 LaTeX 中插入图片，有很多种方式。最好用的应当属利用 graphicx 宏包提供的 \includegraphics 命令。比如你在你的 TeX 源文件同目录下，有名为 qrcode.jpeg 的图片，你可以用这样的方式将它插入到输出文档中：</p>
+<pre class="language-LaTeX"><span class="token function selector">\documentclass</span><span class="token punctuation">{</span><span class="token keyword">article</span><span class="token punctuation">}</span>
+<span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">graphicx</span><span class="token punctuation">}</span>
+<span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+<span class="token function selector">\includegraphics</span><span class="token punctuation">{</span>qrcode.jpeg<span class="token punctuation">}</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">document</span><span class="token punctuation">}</span>
+</pre>
+<p>图片可能很大，超过了输出文件的纸张大小，或者干脆就是你自己觉得输出的效果不爽。这时候你可以用 \includegraphics 控制序列的可选参数来控制。比如</p>
+<pre class="language-LaTeX"><span class="token function selector">\includegraphics</span><span class="token punctuation">[</span>scale=0.5<span class="token punctuation">]</span><span class="token punctuation">{</span>qrcode.jpeg<span class="token punctuation">}</span>
+</pre>
+<p>这样图片宽度会被缩放至<strong>原尺寸</strong>的百分之五十，图片的总高度也会按比例缩放。</p>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/graphicx.png" width="50%">
+</div>
+<blockquote>
+<p>\includegraphics 控制序列还有若干其他的可选参数可供使用，一般并用不到。感兴趣的话，可以去查看该宏包的文档。</p>
+</blockquote>
+<h4 class="mume-header" id="%E8%A1%A8%E6%A0%BC">表格</h4>
+
+<p>tabular 环境提供了最简单的表格功能。它用 \hline 命令表示横线，在列格式中用 | 表示竖线；用 &amp; 来分列，用 \ 来换行；每列可以采用居左、居中、居右等横向对齐方式，分别用 l、c、r 来表示。</p>
+<pre class="language-LaTeX"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">tabular</span><span class="token punctuation">}</span><span class="token punctuation">{</span>|l|c|r|<span class="token punctuation">}</span>
+ <span class="token function selector">\hline</span>
+操作系统<span class="token punctuation">&amp;</span> 发行版<span class="token punctuation">&amp;</span> 编辑器<span class="token function selector">\\</span>
+ <span class="token function selector">\hline</span>
+Windows <span class="token punctuation">&amp;</span> MikTeX <span class="token punctuation">&amp;</span> TexMakerX <span class="token function selector">\\</span>
+ <span class="token function selector">\hline</span>
+Unix/Linux <span class="token punctuation">&amp;</span> teTeX <span class="token punctuation">&amp;</span> Kile <span class="token function selector">\\</span>
+ <span class="token function selector">\hline</span>
+Mac OS <span class="token punctuation">&amp;</span> MacTeX <span class="token punctuation">&amp;</span> TeXShop <span class="token function selector">\\</span>
+ <span class="token function selector">\hline</span>
+通用<span class="token punctuation">&amp;</span> TeX Live <span class="token punctuation">&amp;</span> TeXworks <span class="token function selector">\\</span>
+ <span class="token function selector">\hline</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">tabular</span><span class="token punctuation">}</span>
+</pre>
+<p>效果：</p>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/tabular.png" width="80%">
+</div>
+<h4 class="mume-header" id="%E6%B5%AE%E5%8A%A8%E4%BD%93">浮动体</h4>
+
+<p>插图和表格通常需要占据大块空间，所以在文字处理软件中我们经常需要调整他们的位置。figure 和 table 环境可以自动完成这样的任务；这种自动调整位置的环境称作浮动体(float)。我们以 figure 为例。</p>
+<pre class="language-LaTeX"><span class="token function selector">\begin</span><span class="token punctuation">{</span><span class="token keyword">figure</span><span class="token punctuation">}</span><span class="token punctuation">[</span>htbp<span class="token punctuation">]</span>
+<span class="token function selector">\centering</span>
+<span class="token function selector">\includegraphics</span><span class="token punctuation">{</span>qrcode.jpeg<span class="token punctuation">}</span>
+<span class="token function selector">\caption</span><span class="token punctuation">{</span>交大数学研究生会<span class="token punctuation">}</span>
+<span class="token function selector">\label</span><span class="token punctuation">{</span><span class="token keyword">qrcode</span><span class="token punctuation">}</span>
+<span class="token function selector">\end</span><span class="token punctuation">{</span><span class="token keyword">figure</span><span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/figure.png" height="200">
+</div>
+<p>“htbp” 选项用来指定插图的理想位置，这几个字母分别代表here, top, bottom, float page，也就是就这里、页顶、页尾、浮动页(专门放浮动体的单独页面) 。这四种说明符可以组合使用，自左向右优先级递降。至于最后这个图表出现在哪里，我们就不需要关心了。但是可能出现的一种情况是，如果你的浮动体太多而其他内容太少，它们可能会被堆到整个文档的最后一起出现。</p>
+<p>\centering 用来使插图居中；\caption 命令设置插图标题，LaTeX 会自动给浮动体的标题加上编号。注意 \label 应该放在标题命令之后。</p>
+<blockquote>
+<p>需要注意的是，表的标题应该在表的上方，而图的标题应该在图的下方。这个是排版中的一个默认的规则。<br>
+图表同样也可以进行交叉引用，只需要加个一个标签，就可以用 \ref 命令进行引用了。<br>
+利用 float 宏包，并将figure的参数换成大写的H，可以禁止浮动，文中放哪就放哪</p>
+</blockquote>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/float.png" height="200">
+</div>
+<h3 class="mume-header" id="%E7%89%88%E9%9D%A2%E8%AE%BE%E7%BD%AE">版面设置</h3>
+
+<h4 class="mume-header" id="%E9%A1%B5%E8%BE%B9%E8%B7%9D">页边距</h4>
+
+<p>设置页边距，推荐使用 geometry 宏包。可以在这里查看它的说明文档。</p>
+<p>比如我希望，将纸张的长度设置为 20cm、宽度设置为 15cm、左边距 1cm、右边距 2cm、上边距 3cm、下边距 4cm，可以在导言区加上这样几行：</p>
+<pre class="language-LaTeX"><span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">geometry</span><span class="token punctuation">}</span>
+<span class="token function selector">\geometry</span><span class="token punctuation">{</span>papersize=<span class="token punctuation">{</span>20cm,15cm<span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token function selector">\geometry</span><span class="token punctuation">{</span>left=1cm,right=2cm,top=3cm,bottom=4cm<span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/geometry.png" width="80%">
+</div>
+<h4 class="mume-header" id="%E9%A1%B5%E9%9D%A2%E9%A3%8E%E6%A0%BC">页面风格</h4>
+
+<p>对于一个页面，我们可能还需要页码等页眉、页脚信息。这个时候就需要我们来定制页面风格了。使用 \pagestyle 命令可以调用三种默认的页面风格：</p>
+<ul>
+<li>plain：只有页底中央的页码；</li>
+<li>empty：啥也没有；</li>
+<li>headings：把章节的标题写在页眉处，同时有页码；</li>
+</ul>
+<p>其中 headings 是默认的页面风格，依据文类的不同而有所改变，大家可以自己尝试一下。例如调用 plain 风格的命令就是 \pagestyle{plain}，记得要在导言区使用。</p>
+<h4 class="mume-header" id="%E9%A1%B5%E7%9C%89%E9%A1%B5%E8%84%9A">页眉页脚</h4>
+
+<p>如果需要深度定制各种页眉页脚，可以使用 fancyhdr 宏包。fancyhdr 宏包可以对页眉和页脚的左中右共六个位置显示的内容进行定义，大家可以在<a href="http://texdoc.net/texmf-dist/doc/latex/fancyhdr/fancyhdr.pdf">这里</a>查看它的说明文档来尝试自己定制一个页面风格。</p>
+<p>比如我希望，在页眉左边写上文章标题，右边写上活动方；页脚的正中写上页码；页眉页脚和正文之间有一道宽为 0.4pt 的横线分割，可以在导言区加上如下几行：</p>
+<pre class="language-LaTeX"><span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">fancyhdr</span><span class="token punctuation">}</span>
+<span class="token function selector">\pagestyle</span><span class="token punctuation">{</span>fancy<span class="token punctuation">}</span>
+<span class="token function selector">\lhead</span><span class="token punctuation">{</span>An Introduction to <span class="token function selector">\LaTeX</span><span class="token punctuation">}</span>
+<span class="token function selector">\chead</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token function selector">\rhead</span><span class="token punctuation">{</span>Graduate Student Union<span class="token punctuation">}</span>
+<span class="token function selector">\lfoot</span><span class="token punctuation">{</span>left foot<span class="token punctuation">}</span>
+<span class="token function selector">\cfoot</span><span class="token punctuation">{</span><span class="token function selector">\thepage</span><span class="token punctuation">}</span>
+<span class="token function selector">\rfoot</span><span class="token punctuation">{</span>right foot<span class="token punctuation">}</span>
+<span class="token function selector">\renewcommand</span><span class="token punctuation">{</span><span class="token function selector">\headrulewidth</span><span class="token punctuation">}</span><span class="token punctuation">{</span>0.4pt<span class="token punctuation">}</span>
+<span class="token function selector">\renewcommand</span><span class="token punctuation">{</span><span class="token function selector">\footrulewidth</span><span class="token punctuation">}</span><span class="token punctuation">{</span>0.4pt<span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/fancyhdr.png" height="400">
+</div>
+<h4 class="mume-header" id="%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B">首行缩进</h4>
+
+<p>ctex 宏包已经处理好了首行缩进的问题（自然段前空两格汉字宽度）。</p>
+<blockquote>
+<p>不使用 CTeX 宏集（使用 xeCJK 宏包）的话，请遵照以下提示操作。</p>
+<p>中国人写文章，习惯每一段的段首都空出两个中文汉字的长度。美国人没有这个习惯，他们每一小节的段首都顶格。为了解决这个问题，我们可以在导言区调用 \usepackage{indentfirst}.</p>
+<p>就算是这样，首行缩进的长度，仍然不符合中国人的习惯。我们可以在导言区添加这样的控制序列 \setlength{\parindent}{\ccwd} 来调整首行缩进的大小。这里的 \ccwd 是当前字号下一个中文汉字的宽度。</p>
+</blockquote>
+<h4 class="mume-header" id="%E8%A1%8C%E9%97%B4%E8%B7%9D">行间距</h4>
+
+<p>我们可以通过 setspace宏包提供的命令来调整行间距。比如在导言区添加如下内容，可以将行距设置为字号的 1.5 倍：</p>
+<pre class="language-LaTeX"><span class="token function selector">\usepackage</span><span class="token punctuation">{</span><span class="token keyword">setspace</span><span class="token punctuation">}</span>
+<span class="token function selector">\onehalfspacing</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/spacing.png" width="80%">
+</div>
+<p>具体可以查看该宏包的<a href="http://texdoc.net/texmf-dist/doc/latex/setspace/README">文档</a>。</p>
+<blockquote>
+<p>请注意用词的差别：</p>
+<ul>
+<li>行距是字号的 1.5 倍；</li>
+<li>1.5 倍行距。</li>
+</ul>
+<p>事实上，这不是设置 1.5 倍行距的正确方法，请参考：<a href="http://liam0205.me/2013/10/17/LaTeX-Linespace/">http://liam0205.me/2013/10/17/LaTeX-Linespace/</a></p>
+</blockquote>
+<h4 class="mume-header" id="%E6%AE%B5%E9%97%B4%E8%B7%9D">段间距</h4>
+
+<p>我们可以通过修改长度 \parskip 的值来调整段间距。例如在导言区添加以下内容</p>
+<pre class="language-LaTeX"><span class="token function selector">\addtolength</span><span class="token punctuation">{</span><span class="token function selector">\parskip</span><span class="token punctuation">}</span><span class="token punctuation">{</span>2em<span class="token punctuation">}</span>
+</pre>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/parskip.png" width="80%">
+</div>
+<p>则可以在原有的基础上，增加段间距 2em。如果需要减小段间距，只需将该数值改为负值即可。</p>
+<h3 class="mume-header" id="%E6%A8%A1%E6%9D%BF%E7%9A%84%E4%BD%BF%E7%94%A8">模板的使用</h3>
+
+<p>在 LaTeX 中使用别人的模板实在是一件非常简单的事情——尤其是很多模板作者已经把文档和教程都做得很好了(丰富的注释和使用说明)。本文不会手把手教大家使用模板，而是给大家讲讲模板应该如何正确打开。</p>
+<p>一个好的模板会按照一定的要求或者需求处理好相应内容的排版。可能有很多 LaTeX 初学者都是从模板入手的。想要用 LaTeX 写个东西，但是不会用，就找了个模板下来，套用进去，一切搞定，好像很简单。这样的傻瓜模式做一锤子买卖确实很方便，但其实有许多潜在的问题。一旦出现编译错误，一些初学者就会直接懵掉，不知道怎么处理。所以我还是推荐大家，最好能先有一些 LaTeX 基础再使用模板。这样不仅遇到问题自己心里有底，需要一些修改的时候也能自己动一下手。</p>
+<p>寻找模板的时候，大家一定要<strong>注意时效，越新越好</strong>。有的时候年龄太大的模板会在新的引擎下出现一些错误，或者用非常老旧的方式来处理一些问题（比如用 CJK 来处理中文）。另外大家最好能寻找<strong>文档齐全</strong>，能联系上作者的模板。这样在遇到问题自己搞不懂的时候可以直接给作者发邮件询问，相对更有保障一些。</p>
+<p>在拿到模板的时候，一定不要着急去开始写作，而一定要先阅读安装说明(<a href="http://README.md">README.md</a>)和使用指南。有很多 demo 开头的文件通常都是作者写的示例，这是我们不知从何开始时最好的读物。有的时候你甚至可以直接复制一份 demo 然后在里面添加上自己的内容来作为最后的成品，编译结果不会有太大的差异，但那样无疑会增加一些工作量。</p>
+<p>模板的 demo 其实也有很多学习价值。比如我就是前两年在这个模板中看到了非常漂亮的代码排版，然后懂得了使用 minted 宏包来排版代码。当然如果你是为了学习写模板的话，一定要找质量上乘的模板（我相信这个网站上的模板质量都过硬），不然代码质量太差的模板会把初学者引入歧途。不过我并没有这方面的经验，只是提醒想要入坑的朋友们注意。另外，模板 demo 的注释中也有很多关于模板使用的信息，demo 篇幅也不长大家可以仔细阅读一下。</p>
+<p>这里提供一个模板下载网站，上面有许多非常实用的模板，上手也十分容易。<a href="http://www.latexstudio.net/">LaTeX Studio</a></p>
+<h2 class="mume-header" id="%E6%97%A0%E5%85%B3-latex-%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B%E6%83%85">无关 LaTeX 的一些事情</h2>
+
+<h3 class="mume-header" id="tex-%E5%AE%B6%E6%97%8F">TeX 家族</h3>
+
+<p>如果你认真完成了上面所有的练习，并琢磨了其中的意义，相信你已经可以用 LaTeX 排版出漂亮的文档了。现在我们说一点历史，帮助你更好地理解 TeX 这个系统。</p>
+<p>带有 TeX 的词，仅仅是本文就已经提到了 TeX, LaTeX, XeLaTeX。通常中国学生面对不了解意思的一群形近单词，都会有一种「本能的恐惧」（笑~）。<br>
+因此，「大神们」在为新手介绍 TeX 的时候，如果互相争论 「XXTeX 比 YYTeX 好」或者是「XXTeX 的 YYTeX 如何如何」，往往会蹦出下面这些带有 TeX 的词汇：<br>
+TeX, pdfTeX, XeTeX, LuaTeX, LaTeX, pdfLaTeX, XeLaTeX …</p>
+<p>事实上，这部分的内容太过复杂，我自己的了解也实在有限。所以下面这部分的内容也只能是对我了解到的知识的一个概括，甚至可能有些许谬误。所以大家只需要将这部分的内容当做是一个参考就可以了。</p>
+<h4 class="mume-header" id="tex-latex">TeX-LaTeX</h4>
+
+<p>TeX 是高德纳（Donald Ervin Knuth，1938年1月10日 –）教授愤世嫉俗（追求完美）做出来的排版引擎，同时也是该引擎使用的标记语言（Markup Lang）的名称。这里所谓的引擎，是指能够实现断行、分页等操作的程序（请注意这并不是定义）；这里的标记语言，是指一种将控制命令和文本结合起来的格式，它的主体是其中的文本而控制命令则实现一些特殊效果（同样请注意这并不是定义）。</p>
+<p>而 LaTeX 则是 L. Lamport （1941年2月7日 – ） 教授开发的基于 TeX 的排版系统。实际上 LaTeX 利用 TeX 的控制命令，定义了许多新的控制命令并封装成一个可执行文件。这个可执行文件会去解释 LaTeX 新定义的命令成为 TeX 的控制命令，并最终交由 TeX 引擎进行排版。</p>
+<p>在 TeX - LaTeX 组合中，</p>
+<ol>
+<li>最终进行断行、分页等操作的，是 TeX 引擎；</li>
+<li>LaTeX 实际上是一个工具，它将用户按照它的格式编写的文档解释成 TeX 引擎能理解的形式并交付给 TeX 引擎处理，再将最终结果返回给用户。</li>
+</ol>
+<h4 class="mume-header" id="pdftex-pdflatex">pdfTeX-pdfLaTeX</h4>
+
+<p>TeX 系统生成的文件是 dvi 格式，虽然可以用其他程序将其转换为例如 pdf 等更为常见的格式，但是毕竟不方便。</p>
+<blockquote>
+<p>dvi 格式是为了排版而产生的，它本身并不支持所谓的「交叉引用」，pdfTeX 直接输出 pdf 格式的文档，这也是 pdfTeX 相对 TeX 进步（易用性方面）的地方。</p>
+</blockquote>
+<p>为了解决这个问题，Hàn Thế Thành 博士在他的博士论文中提出了 pdfTeX 这个对 TeX 引擎的扩展。二者最主要的差别就是 pdfTeX 直接输出 pdf 格式文档，而 TeX 引擎则输出 dvi 格式的文档。</p>
+<p>pdfLaTeX 这个程序的主要工作依旧是将 LaTeX 格式的文档进行解释，不过此次是将解释之后的结果交付给 pdfTeX 引擎处理。</p>
+<h4 class="mume-header" id="xetex-xelatex">XeTeX-XeLaTeX</h4>
+
+<p>高德纳教授在实现 TeX 的当初并没有考虑到中日韩等字符的处理，而只支持 ASCII 字符。这并不是说中日韩字符就无法使用 TeX 引擎排版了，事实上 TeX 将每个字符用一个框包括起来（这被称为盒子）然后将一个个的盒子按照一定规则排列起来，因而 TeX 的算法理论上适用于任何字符。ASCII 字符简单理解，就是在半角模式下你的键盘能直接输出的字符。</p>
+<p>在 XeTeX 出现之前，为了能让 TeX 系统排版中文，国人曾使用了 天元、CCT、CJK 等手段处理中文。其中 天元和CCT 现在已经基本不用，CJK 因为使用时间长且效果相对较好，现在还有人使用。</p>
+<p>不同于 CJK 等方式使用 TeX 和 pdfTeX 这两个不直接支持 Unicode 字符的引擎，XeTeX 引擎直接支持 Unicode 字符。也就是说现在不使用 CJK 也能排版中日韩文的文档了，并且这种方式要比之前的方式更加优秀。</p>
+<p>XeLaTeX 和 XeTeX 的关系与 pdfLaTeX 和 pdfTeX 的关系类似，这里不再赘述。</p>
+<p>使用 XeTeX 引擎需要使用 UTF-8 编码。</p>
+<blockquote>
+<p>所谓编码就是字符在计算机储存时候的对应关系。例如，假设有一种编码，将汉字「你」对应为数字「1」；「好」对应为数字「2」，则含有「你好」的纯文本文件，在计算机中储存为「12」（读取文件的时候，将「12」再转换为「你好」显示在屏幕上或打印出来）。</p>
+<p>UTF-8 编码是 Unicode 编码的一种，可以参考wiki</p>
+</blockquote>
+<h4 class="mume-header" id="luatex">LuaTeX</h4>
+
+<p>LuaTeX 是正在开发完善的一个 TeX 引擎，相对它的前辈们还相当的不完善，这里不赘述。</p>
+<h4 class="mume-header" id="ctex-miktex-tex-live">CTeX - MiKTeX - TeX Live</h4>
+
+<p>之前介绍了 TeX, LaTeX, pdfTeX, pdfLaTeX, XeTeX, XeLaTeX, LuaTeX 等，他们都是 TeX 家族的一部分。但是作为一个能够使用的 TeX 系统，仅仅有他们还是不够的。CTeX, MiKTeX, TeX Live 都是被称为「发行」的软件合集。他们包括了上述各种引擎的可执行程序，以及一些文档类、模板、字体文件、辅助程序等等。其中 CTeX 是建立在 MiKTeX 的基础之上的。</p>
+<h4 class="mume-header" id="%E6%80%BB%E7%BB%93">总结</h4>
+
+<p>TeX - pdfTeX - XeTeX - LuaTeX 都是排版引擎，按照先进程度递增（LuaTeX 尚未完善）。</p>
+<p>LaTeX 是一种格式，基于 TeX 格式定义了很多更方便使用的控制命令。上述四个引擎都有对应的程序将 LaTeX 格式解释成引擎能处理的内容。</p>
+<p>CTeX, MiKTeX, TeX Live 都是 TeX 的发行版，他们是许许多多东西的集合。</p>
+<h3 class="mume-header" id="%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86">问题处理</h3>
+
+<ol>
+<li>24K纯新手，建议先读完一本入门读物，了解基本的知识；</li>
+<li>无论如何，先读文档！绝大部分问题都是文档可以解决的；</li>
+<li>利用 Google 等搜索引擎你的问题；</li>
+<li>在各个论坛或者 LaTeX 交流群里聪明地提出你的问题。</li>
+</ol>
+<p>推荐两本读物：《LaTeX入门》，《LaTeX 2e 完全学习手册》</p>
+<p>CTeX论坛提问版：<a href="http://bbs.ctex.org/forum.php?mod=forumdisplay&amp;fid=6&amp;page=1">http://bbs.ctex.org/forum.php?mod=forumdisplay&amp;fid=6&amp;page=1</a></p>
+<p>另外知乎专栏关于LaTeX也有不少讨论，经常关注也能学到不少。</p>
+<h3 class="mume-header" id="%E7%BC%96%E8%BE%91%E5%99%A8%E9%80%89%E6%8B%A9">编辑器选择</h3>
+
+<p>工欲善其事，必先利其器。支持编写 LaTeX 的编辑器有很多，初学者建议先从 TeXWorks 开始，等到有一定基础后可以换一些高度定制化的编辑器。那样不仅可以<strong>大大提高效率</strong>，而且真的会让你<strong>爱上编写纯文本代码</strong>！我曾经尝试过许多编辑器，例如Notepad++, Sublime Text, Atom, VScode, Vim。这里对于编辑器给出一些建议：</p>
+<ol>
+<li>编辑器一定要打开行号，打开行号！</li>
+<li>多使用编辑器的替换查找功能！</li>
+<li>选择一款适合自己的字体，百看不腻有木有！</li>
+<li>如果能有代码自动补全，那再好不过。</li>
+<li>没有代码补全的最好要有代码高亮。</li>
+</ol>
+<div align="center">
+<img src="http://oye4atjxc.bkt.clouddn.com/LaTeX/intro/subl.png" width="80%">
+</div>
+<h3 class="mume-header" id="%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC">代码风格</h3>
+
+<p>如何编写整洁高效的代码是有梦想的程序员应当思考的。在有一定编写 LaTeX 经验后，请好好思考一下自己的文本代码是否惨不忍睹以及如何改善自己的代码。这里同样给出几点切身建议：</p>
+<ol>
+<li>多使用注释！</li>
+<li>空行永远不要嫌少！</li>
+<li>能简则简，避免长命令以及命令过挤！</li>
+<li>多使用自定义命令！</li>
+<li>学习模板中高手的代码！</li>
+</ol>
+
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#latex%E4%BC%98%E9%9B%85%E9%AB%98%E6%95%88%E7%9A%84%E5%86%99%E4%BD%9C%E6%96%B9%E5%BC%8F">LaTeX：优雅高效的写作方式</a>
+<ul>
+<li><a href="#%E5%86%99%E5%9C%A8-latex-%E4%B9%8B%E5%89%8D">写在 LaTeX 之前</a>
+<ul>
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8-latex">为什么要使用 LaTeX</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%E4%BA%BA%E9%80%82%E5%90%88%E4%BD%BF%E7%94%A8-latex">什么样的人适合使用 LaTeX</a></li>
+<li><a href="#latex-%E7%AE%80%E5%8F%B2">LaTeX 简史</a></li>
+<li><a href="#latex-%E7%9A%84%E5%AE%89%E8%A3%85">LaTeX 的安装</a></li>
+<li><a href="#latex-%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86">LaTeX 的工作原理</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E4%B8%AA-latex-%E6%96%87%E6%A1%A3">第一个 LaTeX 文档</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8A%A8%E6%89%8B%E5%86%99-latex">动手写 LaTeX</a>
+<ul>
+<li><a href="#latex-%E6%96%87%E6%A1%A3%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9E%84%E6%88%90">LaTeX 文档的基本构成</a>
+<ul>
+<li><a href="#%E5%AF%BC%E8%A8%80%E5%8C%BA">导言区</a></li>
+<li><a href="#%E6%AD%A3%E6%96%87">正文</a></li>
+<li><a href="#%E6%B3%A8%E9%87%8A">注释</a></li>
+<li><a href="#%E5%AE%8F%E5%8C%85">宏包</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AD%97%E4%BD%93%E4%B8%8E%E5%AD%97%E5%8F%B7">字体与字号</a></li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E6%8E%92%E7%89%88%E6%95%88%E6%9E%9C">常用排版效果</a></li>
+<li><a href="#%E6%96%87%E6%A1%A3%E7%BB%93%E6%9E%84%E5%8C%96">文档结构化</a></li>
+<li><a href="#%E6%A0%87%E7%AD%BE%E4%B8%8E%E4%BA%A4%E5%8F%89%E5%BC%95%E7%94%A8">标签与交叉引用</a></li>
+<li><a href="#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9">如何获取帮助</a></li>
+<li><a href="#%E5%88%B6%E4%BD%9C%E7%9B%AE%E5%BD%95">制作目录</a></li>
+<li><a href="#%E6%8F%92%E5%85%A5%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F">插入数学公式</a>
+<ul>
+<li><a href="#%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%BC%8F">数学模式</a></li>
+<li><a href="#%E4%B8%8A%E4%B8%8B%E6%A0%87">上下标</a></li>
+<li><a href="#%E6%A0%B9%E5%BC%8F%E4%B8%8E%E5%88%86%E5%BC%8F">根式与分式</a></li>
+<li><a href="#%E8%BF%90%E7%AE%97%E7%AC%A6">运算符</a></li>
+<li><a href="#%E5%AE%9A%E7%95%8C%E7%AC%A6%E6%8B%AC%E5%8F%B7%E7%AD%89">定界符（括号等）</a></li>
+<li><a href="#%E7%9C%81%E7%95%A5%E5%8F%B7">省略号</a></li>
+<li><a href="#%E7%9F%A9%E9%98%B5">矩阵</a></li>
+<li><a href="#%E6%95%B0%E5%AD%A6%E7%AC%A6%E5%8F%B7">数学符号</a></li>
+<li><a href="#%E5%A4%9A%E8%A1%8C%E5%85%AC%E5%BC%8F">多行公式</a></li>
+<li><a href="#%E9%95%BF%E5%85%AC%E5%BC%8F">长公式</a></li>
+<li><a href="#%E5%85%AC%E5%BC%8F%E7%BB%84">公式组</a></li>
+<li><a href="#%E5%88%86%E6%AE%B5%E5%87%BD%E6%95%B0">分段函数</a></li>
+</ul>
+</li>
+<li><a href="#%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E5%92%8C%E8%A1%A8%E6%A0%BC">插入图片和表格</a>
+<ul>
+<li><a href="#%E5%9B%BE%E7%89%87">图片</a></li>
+<li><a href="#%E8%A1%A8%E6%A0%BC">表格</a></li>
+<li><a href="#%E6%B5%AE%E5%8A%A8%E4%BD%93">浮动体</a></li>
+</ul>
+</li>
+<li><a href="#%E7%89%88%E9%9D%A2%E8%AE%BE%E7%BD%AE">版面设置</a>
+<ul>
+<li><a href="#%E9%A1%B5%E8%BE%B9%E8%B7%9D">页边距</a></li>
+<li><a href="#%E9%A1%B5%E9%9D%A2%E9%A3%8E%E6%A0%BC">页面风格</a></li>
+<li><a href="#%E9%A1%B5%E7%9C%89%E9%A1%B5%E8%84%9A">页眉页脚</a></li>
+<li><a href="#%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B">首行缩进</a></li>
+<li><a href="#%E8%A1%8C%E9%97%B4%E8%B7%9D">行间距</a></li>
+<li><a href="#%E6%AE%B5%E9%97%B4%E8%B7%9D">段间距</a></li>
+</ul>
+</li>
+<li><a href="#%E6%A8%A1%E6%9D%BF%E7%9A%84%E4%BD%BF%E7%94%A8">模板的使用</a></li>
+</ul>
+</li>
+<li><a href="#%E6%97%A0%E5%85%B3-latex-%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B%E6%83%85">无关 LaTeX 的一些事情</a>
+<ul>
+<li><a href="#tex-%E5%AE%B6%E6%97%8F">TeX 家族</a>
+<ul>
+<li><a href="#tex-latex">TeX-LaTeX</a></li>
+<li><a href="#pdftex-pdflatex">pdfTeX-pdfLaTeX</a></li>
+<li><a href="#xetex-xelatex">XeTeX-XeLaTeX</a></li>
+<li><a href="#luatex">LuaTeX</a></li>
+<li><a href="#ctex-miktex-tex-live">CTeX - MiKTeX - TeX Live</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+</li>
+<li><a href="#%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86">问题处理</a></li>
+<li><a href="#%E7%BC%96%E8%BE%91%E5%99%A8%E9%80%89%E6%8B%A9">编辑器选择</a></li>
+<li><a href="#%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC">代码风格</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    </body>
+    
+    
+    
+    
+    
+    <script>
+(function bindTaskListEvent() {
+  var taskListItemCheckboxes = document.body.getElementsByClassName('task-list-item-checkbox')
+  for (var i = 0; i < taskListItemCheckboxes.length; i++) {
+    var checkbox = taskListItemCheckboxes[i]
+    var li = checkbox.parentElement
+    if (li.tagName !== 'LI') li = li.parentElement
+    if (li.tagName === 'LI') {
+      li.classList.add('task-list-item')
+    }
+  }
+}())    
+</script>
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  </html>
